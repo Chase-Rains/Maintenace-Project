@@ -140,7 +140,7 @@ Partial Class Form1
         Me.Controls.Add(Me.reportsButton)
         Me.Controls.Add(Me.studInfoButton)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Login"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

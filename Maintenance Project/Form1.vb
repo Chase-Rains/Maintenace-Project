@@ -16,6 +16,9 @@ Public Class Form1
         'if there isnt a match error message else authenticate and show buttons
         If table.Rows.Count() <= 0 Then
             MsgBox("Quit Guessing!", MsgBoxStyle.OkOnly, "Come on Professor Nolan...")
+            reportsButton.Visible = False
+            studInfoButton.Visible = False
+            advisingButton.Visible = False
         Else
             reportsButton.Visible = True
             studInfoButton.Visible = True
