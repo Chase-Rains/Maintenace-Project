@@ -71,17 +71,41 @@ Partial Class summary_report
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.SumReportDGV = New System.Windows.Forms.DataGridView()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.SearchTextbox = New System.Windows.Forms.TextBox()
+        Me.SearchLabel = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SumReportDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'nameTextBox
         '
-        Me.nameTextBox.Location = New System.Drawing.Point(56, 9)
+        Me.nameTextBox.Location = New System.Drawing.Point(75, 106)
         Me.nameTextBox.Name = "nameTextBox"
         Me.nameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.nameTextBox.TabIndex = 0
@@ -89,15 +113,15 @@ Partial Class summary_report
         'nameLabel
         '
         Me.nameLabel.AutoSize = True
-        Me.nameLabel.Location = New System.Drawing.Point(12, 9)
+        Me.nameLabel.Location = New System.Drawing.Point(5, 109)
         Me.nameLabel.Name = "nameLabel"
-        Me.nameLabel.Size = New System.Drawing.Size(38, 13)
+        Me.nameLabel.Size = New System.Drawing.Size(69, 13)
         Me.nameLabel.TabIndex = 1
-        Me.nameLabel.Text = "Name:"
+        Me.nameLabel.Text = "Middle Name"
         '
         'GradDateTextBox
         '
-        Me.GradDateTextBox.Location = New System.Drawing.Point(431, 74)
+        Me.GradDateTextBox.Location = New System.Drawing.Point(652, 122)
         Me.GradDateTextBox.Name = "GradDateTextBox"
         Me.GradDateTextBox.Size = New System.Drawing.Size(100, 20)
         Me.GradDateTextBox.TabIndex = 2
@@ -161,7 +185,7 @@ Partial Class summary_report
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(162, 12)
+        Me.Label1.Location = New System.Drawing.Point(374, 43)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(100, 13)
         Me.Label1.TabIndex = 11
@@ -170,7 +194,7 @@ Partial Class summary_report
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(397, 12)
+        Me.Label2.Location = New System.Drawing.Point(609, 43)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(28, 13)
         Me.Label2.TabIndex = 12
@@ -179,7 +203,7 @@ Partial Class summary_report
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(366, 106)
+        Me.Label5.Location = New System.Drawing.Point(587, 154)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(47, 13)
         Me.Label5.TabIndex = 15
@@ -197,7 +221,7 @@ Partial Class summary_report
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(366, 133)
+        Me.Label9.Location = New System.Drawing.Point(587, 181)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(37, 13)
         Me.Label9.TabIndex = 19
@@ -215,7 +239,7 @@ Partial Class summary_report
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(366, 77)
+        Me.Label11.Location = New System.Drawing.Point(587, 125)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(59, 13)
         Me.Label11.TabIndex = 21
@@ -251,7 +275,7 @@ Partial Class summary_report
         'EthnicComboBox
         '
         Me.EthnicComboBox.FormattingEnabled = True
-        Me.EthnicComboBox.Location = New System.Drawing.Point(268, 9)
+        Me.EthnicComboBox.Location = New System.Drawing.Point(480, 40)
         Me.EthnicComboBox.Name = "EthnicComboBox"
         Me.EthnicComboBox.Size = New System.Drawing.Size(121, 21)
         Me.EthnicComboBox.TabIndex = 25
@@ -259,7 +283,7 @@ Partial Class summary_report
         'SexComboBox
         '
         Me.SexComboBox.FormattingEnabled = True
-        Me.SexComboBox.Location = New System.Drawing.Point(431, 12)
+        Me.SexComboBox.Location = New System.Drawing.Point(643, 43)
         Me.SexComboBox.Name = "SexComboBox"
         Me.SexComboBox.Size = New System.Drawing.Size(121, 21)
         Me.SexComboBox.TabIndex = 26
@@ -267,7 +291,7 @@ Partial Class summary_report
         'HoldCheckBox
         '
         Me.HoldCheckBox.AutoSize = True
-        Me.HoldCheckBox.Location = New System.Drawing.Point(369, 45)
+        Me.HoldCheckBox.Location = New System.Drawing.Point(590, 93)
         Me.HoldCheckBox.Name = "HoldCheckBox"
         Me.HoldCheckBox.Size = New System.Drawing.Size(48, 17)
         Me.HoldCheckBox.TabIndex = 27
@@ -309,9 +333,9 @@ Partial Class summary_report
         Me.GroupBox1.Controls.Add(Me.GSODefCheckBox)
         Me.GroupBox1.Controls.Add(Me.GSOAcceptCheckBox)
         Me.GroupBox1.Controls.Add(Me.GSODenyCheckBox)
-        Me.GroupBox1.Location = New System.Drawing.Point(17, 35)
+        Me.GroupBox1.Location = New System.Drawing.Point(219, 88)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(90, 108)
+        Me.GroupBox1.Size = New System.Drawing.Size(90, 125)
         Me.GroupBox1.TabIndex = 31
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GSO:"
@@ -319,7 +343,7 @@ Partial Class summary_report
         'DenyCheckBox
         '
         Me.DenyCheckBox.AutoSize = True
-        Me.DenyCheckBox.Location = New System.Drawing.Point(480, 106)
+        Me.DenyCheckBox.Location = New System.Drawing.Point(701, 154)
         Me.DenyCheckBox.Name = "DenyCheckBox"
         Me.DenyCheckBox.Size = New System.Drawing.Size(51, 17)
         Me.DenyCheckBox.TabIndex = 32
@@ -329,7 +353,7 @@ Partial Class summary_report
         'AcceptCheckBox
         '
         Me.AcceptCheckBox.AutoSize = True
-        Me.AcceptCheckBox.Location = New System.Drawing.Point(419, 105)
+        Me.AcceptCheckBox.Location = New System.Drawing.Point(640, 153)
         Me.AcceptCheckBox.Name = "AcceptCheckBox"
         Me.AcceptCheckBox.Size = New System.Drawing.Size(60, 17)
         Me.AcceptCheckBox.TabIndex = 33
@@ -339,7 +363,7 @@ Partial Class summary_report
         'EnrollCheckBox
         '
         Me.EnrollCheckBox.AutoSize = True
-        Me.EnrollCheckBox.Location = New System.Drawing.Point(460, 45)
+        Me.EnrollCheckBox.Location = New System.Drawing.Point(681, 93)
         Me.EnrollCheckBox.Name = "EnrollCheckBox"
         Me.EnrollCheckBox.Size = New System.Drawing.Size(52, 17)
         Me.EnrollCheckBox.TabIndex = 34
@@ -349,7 +373,7 @@ Partial Class summary_report
         'CheckBox8
         '
         Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(419, 132)
+        Me.CheckBox8.Location = New System.Drawing.Point(640, 180)
         Me.CheckBox8.Name = "CheckBox8"
         Me.CheckBox8.Size = New System.Drawing.Size(46, 17)
         Me.CheckBox8.TabIndex = 35
@@ -359,7 +383,7 @@ Partial Class summary_report
         'CheckBox9
         '
         Me.CheckBox9.AutoSize = True
-        Me.CheckBox9.Location = New System.Drawing.Point(480, 132)
+        Me.CheckBox9.Location = New System.Drawing.Point(701, 180)
         Me.CheckBox9.Name = "CheckBox9"
         Me.CheckBox9.Size = New System.Drawing.Size(52, 17)
         Me.CheckBox9.TabIndex = 36
@@ -376,7 +400,7 @@ Partial Class summary_report
         Me.GroupBox2.Controls.Add(Me.verbalTextBox)
         Me.GroupBox2.Controls.Add(Me.QuantTextBox)
         Me.GroupBox2.Controls.Add(Me.TotalTextBox)
-        Me.GroupBox2.Location = New System.Drawing.Point(133, 36)
+        Me.GroupBox2.Location = New System.Drawing.Point(326, 80)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(222, 131)
         Me.GroupBox2.TabIndex = 37
@@ -428,9 +452,9 @@ Partial Class summary_report
         '
         'AddStudentButton
         '
-        Me.AddStudentButton.Location = New System.Drawing.Point(537, 406)
+        Me.AddStudentButton.Location = New System.Drawing.Point(12, 371)
         Me.AddStudentButton.Name = "AddStudentButton"
-        Me.AddStudentButton.Size = New System.Drawing.Size(92, 49)
+        Me.AddStudentButton.Size = New System.Drawing.Size(149, 29)
         Me.AddStudentButton.TabIndex = 38
         Me.AddStudentButton.Text = "Add Student"
         Me.AddStudentButton.UseVisualStyleBackColor = True
@@ -447,7 +471,7 @@ Partial Class summary_report
         Me.GroupBox3.Controls.Add(Me.Label12)
         Me.GroupBox3.Controls.Add(Me.Label13)
         Me.GroupBox3.Controls.Add(Me.Label14)
-        Me.GroupBox3.Location = New System.Drawing.Point(17, 173)
+        Me.GroupBox3.Location = New System.Drawing.Point(219, 251)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(243, 149)
         Me.GroupBox3.TabIndex = 39
@@ -463,9 +487,9 @@ Partial Class summary_report
         Me.GroupBox4.Controls.Add(Me.RadioButton3)
         Me.GroupBox4.Controls.Add(Me.RadioButton2)
         Me.GroupBox4.Controls.Add(Me.RadioButton1)
-        Me.GroupBox4.Location = New System.Drawing.Point(279, 173)
+        Me.GroupBox4.Location = New System.Drawing.Point(479, 217)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(350, 227)
+        Me.GroupBox4.Size = New System.Drawing.Size(350, 183)
         Me.GroupBox4.TabIndex = 46
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Applicant Status"
@@ -547,20 +571,236 @@ Partial Class summary_report
         Me.RadioButton1.Text = "Admitted/Student Declined"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'SumReportDGV
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(17, 460)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
-        Me.DataGridView1.TabIndex = 47
+        Me.SumReportDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.SumReportDGV.Location = New System.Drawing.Point(12, 461)
+        Me.SumReportDGV.Name = "SumReportDGV"
+        Me.SumReportDGV.Size = New System.Drawing.Size(817, 270)
+        Me.SumReportDGV.TabIndex = 47
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(75, 80)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 48
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(12, 83)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(57, 13)
+        Me.Label6.TabIndex = 49
+        Me.Label6.Text = "First Name"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(11, 135)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(58, 13)
+        Me.Label16.TabIndex = 50
+        Me.Label16.Text = "Last Name"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(75, 132)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 51
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(40, 161)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(29, 13)
+        Me.Label17.TabIndex = 52
+        Me.Label17.Text = "SSN"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(75, 158)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 53
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(75, 184)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 55
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(24, 187)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(45, 13)
+        Me.Label18.TabIndex = 54
+        Me.Label18.Text = "Address"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(75, 210)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.TabIndex = 57
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(40, 213)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(24, 13)
+        Me.Label19.TabIndex = 56
+        Me.Label19.Text = "City"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(24, 265)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(50, 13)
+        Me.Label20.TabIndex = 60
+        Me.Label20.Text = "Zip Code"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(32, 239)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(32, 13)
+        Me.Label21.TabIndex = 58
+        Me.Label21.Text = "State"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(75, 262)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox6.TabIndex = 62
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(75, 236)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox7.TabIndex = 61
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(75, 288)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox8.TabIndex = 64
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(37, 291)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(32, 13)
+        Me.Label22.TabIndex = 63
+        Me.Label22.Text = "Email"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(75, 314)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox9.TabIndex = 66
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(20, 317)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(49, 13)
+        Me.Label23.TabIndex = 65
+        Me.Label23.Text = "Birthdate"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(20, 342)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(47, 13)
+        Me.Label24.TabIndex = 67
+        Me.Label24.Text = "Ethnicity"
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(75, 340)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox10.TabIndex = 68
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(12, 57)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(61, 13)
+        Me.Label25.TabIndex = 70
+        Me.Label25.Text = "Student ID:"
+        '
+        'TextBox11
+        '
+        Me.TextBox11.Location = New System.Drawing.Point(75, 54)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox11.TabIndex = 69
+        '
+        'SearchTextbox
+        '
+        Me.SearchTextbox.Location = New System.Drawing.Point(61, 432)
+        Me.SearchTextbox.Name = "SearchTextbox"
+        Me.SearchTextbox.Size = New System.Drawing.Size(100, 20)
+        Me.SearchTextbox.TabIndex = 71
+        '
+        'SearchLabel
+        '
+        Me.SearchLabel.AutoSize = True
+        Me.SearchLabel.Location = New System.Drawing.Point(12, 435)
+        Me.SearchLabel.Name = "SearchLabel"
+        Me.SearchLabel.Size = New System.Drawing.Size(44, 13)
+        Me.SearchLabel.TabIndex = 72
+        Me.SearchLabel.Text = "Search:"
         '
         'summary_report
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(659, 743)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.ClientSize = New System.Drawing.Size(838, 743)
+        Me.Controls.Add(Me.SearchLabel)
+        Me.Controls.Add(Me.SearchTextbox)
+        Me.Controls.Add(Me.Label25)
+        Me.Controls.Add(Me.TextBox11)
+        Me.Controls.Add(Me.TextBox10)
+        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.SumReportDGV)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.AddStudentButton)
@@ -583,7 +823,7 @@ Partial Class summary_report
         Me.Controls.Add(Me.nameLabel)
         Me.Controls.Add(Me.nameTextBox)
         Me.Name = "summary_report"
-        Me.Text = "summary_report"
+        Me.Text = "Summary Report"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -592,7 +832,7 @@ Partial Class summary_report
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SumReportDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -647,5 +887,29 @@ Partial Class summary_report
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents SumReportDGV As DataGridView
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents SearchTextbox As TextBox
+    Friend WithEvents SearchLabel As Label
 End Class
