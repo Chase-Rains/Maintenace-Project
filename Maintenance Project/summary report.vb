@@ -43,13 +43,34 @@
         ''If statement to test whether or not the cells are seleceted and if they are it fills them into the matching textbox
         If (SumReportDGV.SelectedRows.Count > 0) Then
 
-            nameTextBox.Text = SumReportDGV.SelectedRows(0).Cells(1).Value
-            EthnicComboBox.Text = SumReportDGV.SelectedRows(0).Cells(2).Value
-            SexComboBox.Text = SumReportDGV.SelectedRows(0).Cells(0).Value
+
+
+            StudentIDTextbox.Text = SumReportDGV.SelectedRows(0).Cells(0).Value
+            FirstnameTExtBox.Text = SumReportDGV.SelectedRows(0).Cells(1).Value
+            middlenameTextBox.Text = SumReportDGV.SelectedRows(0).Cells(2).Value
+            LastnameTextBox.Text = SumReportDGV.SelectedRows(0).Cells(3).Value
+            SSNTextBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
+            AddressTextBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
+            CityTextBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
+            StateTextBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
+            ZipCodeTextBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
+            EmailTextBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
+            BirthDateTextBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
+            TextBoxEthnicity.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
+            SexComboBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
+            UndergradInstitutionTextBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
+            CampusTextBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
+            UGPATextBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
+            WorkTextBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
+            UndergradMajorTextBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value
 
 
 
         End If
 
     End Sub
+
+
+
+
 End Class

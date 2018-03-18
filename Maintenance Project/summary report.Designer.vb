@@ -22,7 +22,7 @@ Partial Class summary_report
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.nameTextBox = New System.Windows.Forms.TextBox()
+        Me.middlenameTextBox = New System.Windows.Forms.TextBox()
         Me.nameLabel = New System.Windows.Forms.Label()
         Me.GradDateTextBox = New System.Windows.Forms.TextBox()
         Me.verbalTextBox = New System.Windows.Forms.TextBox()
@@ -33,7 +33,6 @@ Partial Class summary_report
         Me.UGPATextBox = New System.Windows.Forms.TextBox()
         Me.CampusTextBox = New System.Windows.Forms.TextBox()
         Me.UndergradInstitutionTextBox = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -43,7 +42,6 @@ Partial Class summary_report
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.EthnicComboBox = New System.Windows.Forms.ComboBox()
         Me.SexComboBox = New System.Windows.Forms.ComboBox()
         Me.HoldCheckBox = New System.Windows.Forms.CheckBox()
         Me.GSOAcceptCheckBox = New System.Windows.Forms.CheckBox()
@@ -72,28 +70,28 @@ Partial Class summary_report
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.SumReportDGV = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.FirstnameTExtBox = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.LastnameTextBox = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.SSNTextBox = New System.Windows.Forms.TextBox()
+        Me.AddressTextBox = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.CityTextBox = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.ZipCodeTextBox = New System.Windows.Forms.TextBox()
+        Me.StateTextBox = New System.Windows.Forms.TextBox()
+        Me.EmailTextBox = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.BirthDateTextBox = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.TextBoxEthnicity = New System.Windows.Forms.TextBox()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.StudentIDTextbox = New System.Windows.Forms.TextBox()
         Me.SearchTextbox = New System.Windows.Forms.TextBox()
         Me.SearchLabel = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
@@ -103,12 +101,12 @@ Partial Class summary_report
         CType(Me.SumReportDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'nameTextBox
+        'middlenameTextBox
         '
-        Me.nameTextBox.Location = New System.Drawing.Point(75, 106)
-        Me.nameTextBox.Name = "nameTextBox"
-        Me.nameTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.nameTextBox.TabIndex = 0
+        Me.middlenameTextBox.Location = New System.Drawing.Point(75, 106)
+        Me.middlenameTextBox.Name = "middlenameTextBox"
+        Me.middlenameTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.middlenameTextBox.TabIndex = 0
         '
         'nameLabel
         '
@@ -181,15 +179,6 @@ Partial Class summary_report
         Me.UndergradInstitutionTextBox.Name = "UndergradInstitutionTextBox"
         Me.UndergradInstitutionTextBox.Size = New System.Drawing.Size(100, 20)
         Me.UndergradInstitutionTextBox.TabIndex = 6
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(374, 43)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 13)
-        Me.Label1.TabIndex = 11
-        Me.Label1.Text = "Ethnic background:"
         '
         'Label2
         '
@@ -271,14 +260,6 @@ Partial Class summary_report
         Me.Label14.Size = New System.Drawing.Size(57, 13)
         Me.Label14.TabIndex = 24
         Me.Label14.Text = "Work Exp:"
-        '
-        'EthnicComboBox
-        '
-        Me.EthnicComboBox.FormattingEnabled = True
-        Me.EthnicComboBox.Location = New System.Drawing.Point(480, 40)
-        Me.EthnicComboBox.Name = "EthnicComboBox"
-        Me.EthnicComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.EthnicComboBox.TabIndex = 25
         '
         'SexComboBox
         '
@@ -579,12 +560,12 @@ Partial Class summary_report
         Me.SumReportDGV.Size = New System.Drawing.Size(817, 270)
         Me.SumReportDGV.TabIndex = 47
         '
-        'TextBox1
+        'FirstnameTExtBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(75, 80)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 48
+        Me.FirstnameTExtBox.Location = New System.Drawing.Point(75, 80)
+        Me.FirstnameTExtBox.Name = "FirstnameTExtBox"
+        Me.FirstnameTExtBox.Size = New System.Drawing.Size(100, 20)
+        Me.FirstnameTExtBox.TabIndex = 48
         '
         'Label6
         '
@@ -604,12 +585,12 @@ Partial Class summary_report
         Me.Label16.TabIndex = 50
         Me.Label16.Text = "Last Name"
         '
-        'TextBox2
+        'LastnameTextBox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(75, 132)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 51
+        Me.LastnameTextBox.Location = New System.Drawing.Point(75, 132)
+        Me.LastnameTextBox.Name = "LastnameTextBox"
+        Me.LastnameTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.LastnameTextBox.TabIndex = 51
         '
         'Label17
         '
@@ -620,19 +601,19 @@ Partial Class summary_report
         Me.Label17.TabIndex = 52
         Me.Label17.Text = "SSN"
         '
-        'TextBox3
+        'SSNTextBox
         '
-        Me.TextBox3.Location = New System.Drawing.Point(75, 158)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 53
+        Me.SSNTextBox.Location = New System.Drawing.Point(75, 158)
+        Me.SSNTextBox.Name = "SSNTextBox"
+        Me.SSNTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.SSNTextBox.TabIndex = 53
         '
-        'TextBox4
+        'AddressTextBox
         '
-        Me.TextBox4.Location = New System.Drawing.Point(75, 184)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 55
+        Me.AddressTextBox.Location = New System.Drawing.Point(75, 184)
+        Me.AddressTextBox.Name = "AddressTextBox"
+        Me.AddressTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.AddressTextBox.TabIndex = 55
         '
         'Label18
         '
@@ -643,12 +624,12 @@ Partial Class summary_report
         Me.Label18.TabIndex = 54
         Me.Label18.Text = "Address"
         '
-        'TextBox5
+        'CityTextBox
         '
-        Me.TextBox5.Location = New System.Drawing.Point(75, 210)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 57
+        Me.CityTextBox.Location = New System.Drawing.Point(75, 210)
+        Me.CityTextBox.Name = "CityTextBox"
+        Me.CityTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.CityTextBox.TabIndex = 57
         '
         'Label19
         '
@@ -677,26 +658,26 @@ Partial Class summary_report
         Me.Label21.TabIndex = 58
         Me.Label21.Text = "State"
         '
-        'TextBox6
+        'ZipCodeTextBox
         '
-        Me.TextBox6.Location = New System.Drawing.Point(75, 262)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox6.TabIndex = 62
+        Me.ZipCodeTextBox.Location = New System.Drawing.Point(75, 262)
+        Me.ZipCodeTextBox.Name = "ZipCodeTextBox"
+        Me.ZipCodeTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.ZipCodeTextBox.TabIndex = 62
         '
-        'TextBox7
+        'StateTextBox
         '
-        Me.TextBox7.Location = New System.Drawing.Point(75, 236)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 61
+        Me.StateTextBox.Location = New System.Drawing.Point(75, 236)
+        Me.StateTextBox.Name = "StateTextBox"
+        Me.StateTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.StateTextBox.TabIndex = 61
         '
-        'TextBox8
+        'EmailTextBox
         '
-        Me.TextBox8.Location = New System.Drawing.Point(75, 288)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox8.TabIndex = 64
+        Me.EmailTextBox.Location = New System.Drawing.Point(75, 288)
+        Me.EmailTextBox.Name = "EmailTextBox"
+        Me.EmailTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.EmailTextBox.TabIndex = 64
         '
         'Label22
         '
@@ -707,12 +688,12 @@ Partial Class summary_report
         Me.Label22.TabIndex = 63
         Me.Label22.Text = "Email"
         '
-        'TextBox9
+        'BirthDateTextBox
         '
-        Me.TextBox9.Location = New System.Drawing.Point(75, 314)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox9.TabIndex = 66
+        Me.BirthDateTextBox.Location = New System.Drawing.Point(75, 314)
+        Me.BirthDateTextBox.Name = "BirthDateTextBox"
+        Me.BirthDateTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.BirthDateTextBox.TabIndex = 66
         '
         'Label23
         '
@@ -732,12 +713,12 @@ Partial Class summary_report
         Me.Label24.TabIndex = 67
         Me.Label24.Text = "Ethnicity"
         '
-        'TextBox10
+        'TextBoxEthnicity
         '
-        Me.TextBox10.Location = New System.Drawing.Point(75, 340)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox10.TabIndex = 68
+        Me.TextBoxEthnicity.Location = New System.Drawing.Point(75, 340)
+        Me.TextBoxEthnicity.Name = "TextBoxEthnicity"
+        Me.TextBoxEthnicity.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxEthnicity.TabIndex = 68
         '
         'Label25
         '
@@ -748,18 +729,18 @@ Partial Class summary_report
         Me.Label25.TabIndex = 70
         Me.Label25.Text = "Student ID:"
         '
-        'TextBox11
+        'StudentIDTextbox
         '
-        Me.TextBox11.Location = New System.Drawing.Point(75, 54)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox11.TabIndex = 69
+        Me.StudentIDTextbox.Location = New System.Drawing.Point(75, 54)
+        Me.StudentIDTextbox.Name = "StudentIDTextbox"
+        Me.StudentIDTextbox.Size = New System.Drawing.Size(100, 20)
+        Me.StudentIDTextbox.TabIndex = 69
         '
         'SearchTextbox
         '
         Me.SearchTextbox.Location = New System.Drawing.Point(61, 432)
         Me.SearchTextbox.Name = "SearchTextbox"
-        Me.SearchTextbox.Size = New System.Drawing.Size(100, 20)
+        Me.SearchTextbox.Size = New System.Drawing.Size(114, 20)
         Me.SearchTextbox.TabIndex = 71
         '
         'SearchLabel
@@ -779,27 +760,27 @@ Partial Class summary_report
         Me.Controls.Add(Me.SearchLabel)
         Me.Controls.Add(Me.SearchTextbox)
         Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.TextBox11)
-        Me.Controls.Add(Me.TextBox10)
+        Me.Controls.Add(Me.StudentIDTextbox)
+        Me.Controls.Add(Me.TextBoxEthnicity)
         Me.Controls.Add(Me.Label24)
-        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.BirthDateTextBox)
         Me.Controls.Add(Me.Label23)
-        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.EmailTextBox)
         Me.Controls.Add(Me.Label22)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.ZipCodeTextBox)
+        Me.Controls.Add(Me.StateTextBox)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.CityTextBox)
         Me.Controls.Add(Me.Label19)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.AddressTextBox)
         Me.Controls.Add(Me.Label18)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.SSNTextBox)
         Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.LastnameTextBox)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.FirstnameTExtBox)
         Me.Controls.Add(Me.SumReportDGV)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
@@ -813,15 +794,13 @@ Partial Class summary_report
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.HoldCheckBox)
         Me.Controls.Add(Me.SexComboBox)
-        Me.Controls.Add(Me.EthnicComboBox)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GradDateTextBox)
         Me.Controls.Add(Me.nameLabel)
-        Me.Controls.Add(Me.nameTextBox)
+        Me.Controls.Add(Me.middlenameTextBox)
         Me.Name = "summary_report"
         Me.Text = "Summary Report"
         Me.GroupBox1.ResumeLayout(False)
@@ -838,7 +817,7 @@ Partial Class summary_report
 
     End Sub
 
-    Friend WithEvents nameTextBox As TextBox
+    Friend WithEvents middlenameTextBox As TextBox
     Friend WithEvents nameLabel As Label
     Friend WithEvents GradDateTextBox As TextBox
     Friend WithEvents verbalTextBox As TextBox
@@ -849,7 +828,6 @@ Partial Class summary_report
     Friend WithEvents UGPATextBox As TextBox
     Friend WithEvents CampusTextBox As TextBox
     Friend WithEvents UndergradInstitutionTextBox As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label8 As Label
@@ -859,7 +837,6 @@ Partial Class summary_report
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents EthnicComboBox As ComboBox
     Friend WithEvents SexComboBox As ComboBox
     Friend WithEvents HoldCheckBox As CheckBox
     Friend WithEvents GSOAcceptCheckBox As CheckBox
@@ -888,28 +865,28 @@ Partial Class summary_report
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents SumReportDGV As DataGridView
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents FirstnameTExtBox As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label16 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents LastnameTextBox As TextBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents SSNTextBox As TextBox
+    Friend WithEvents AddressTextBox As TextBox
     Friend WithEvents Label18 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents CityTextBox As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents Label21 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents ZipCodeTextBox As TextBox
+    Friend WithEvents StateTextBox As TextBox
+    Friend WithEvents EmailTextBox As TextBox
     Friend WithEvents Label22 As Label
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents BirthDateTextBox As TextBox
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents TextBoxEthnicity As TextBox
     Friend WithEvents Label25 As Label
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents StudentIDTextbox As TextBox
     Friend WithEvents SearchTextbox As TextBox
     Friend WithEvents SearchLabel As Label
 End Class
