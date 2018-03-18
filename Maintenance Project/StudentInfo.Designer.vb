@@ -152,8 +152,12 @@ Partial Class StudentInfo
         Me.Label64 = New System.Windows.Forms.Label()
         Me.Label68 = New System.Windows.Forms.Label()
         Me.tabPersonalInfo = New System.Windows.Forms.TabPage()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.submit = New System.Windows.Forms.Button()
         Me.StudentInfoPanel = New System.Windows.Forms.Panel()
+        Me.lblBirthdayFormat = New System.Windows.Forms.Label()
+        Me.SecondEmailtxtbox = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.EthnicDropDown = New System.Windows.Forms.ComboBox()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.CitizenshipDropDown = New System.Windows.Forms.ComboBox()
@@ -168,7 +172,6 @@ Partial Class StudentInfo
         Me.txtBirthday1 = New System.Windows.Forms.MaskedTextBox()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.lblMiddleName = New System.Windows.Forms.Label()
-        Me.lblBirthdayFormat = New System.Windows.Forms.Label()
         Me.Label55 = New System.Windows.Forms.Label()
         Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.Label56 = New System.Windows.Forms.Label()
@@ -200,7 +203,6 @@ Partial Class StudentInfo
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
-        Me.chkResident = New System.Windows.Forms.CheckBox()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.Label43 = New System.Windows.Forms.Label()
@@ -212,12 +214,104 @@ Partial Class StudentInfo
         Me.Label53 = New System.Windows.Forms.Label()
         Me.Lo = New System.Windows.Forms.Label()
         Me.tabApplication = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.SearchLabel = New System.Windows.Forms.Label()
+        Me.SearchTextbox = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.StudentIDTextbox = New System.Windows.Forms.TextBox()
+        Me.StudentIDTxtBox = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.BirthDateTextBox = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.EmailTextBox = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.ZipCodeTextBox = New System.Windows.Forms.TextBox()
+        Me.StateTextBox = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.CityTextBox = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.AddressTextBox = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.SSNTextBox = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.LastnameTextBox = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.FirstnameTExtBox = New System.Windows.Forms.TextBox()
+        Me.SumReportDGV = New System.Windows.Forms.DataGridView()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton7 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.UndergradInstitutionTextBox = New System.Windows.Forms.TextBox()
+        Me.CampusTextBox = New System.Windows.Forms.TextBox()
+        Me.UGPATextBox = New System.Windows.Forms.TextBox()
+        Me.WorkTextBox = New System.Windows.Forms.TextBox()
+        Me.UndergradMajorTextBox = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.AddStudentButton = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.AvgGMATTextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.verbalTextBox = New System.Windows.Forms.TextBox()
+        Me.QuantTextBox = New System.Windows.Forms.TextBox()
+        Me.TotalTextBox = New System.Windows.Forms.TextBox()
+        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
+        Me.EnrollCheckBox = New System.Windows.Forms.CheckBox()
+        Me.AcceptCheckBox = New System.Windows.Forms.CheckBox()
+        Me.DenyCheckBox = New System.Windows.Forms.CheckBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GSODefCheckBox = New System.Windows.Forms.CheckBox()
+        Me.GSOAcceptCheckBox = New System.Windows.Forms.CheckBox()
+        Me.GSODenyCheckBox = New System.Windows.Forms.CheckBox()
+        Me.HoldCheckBox = New System.Windows.Forms.CheckBox()
+        Me.SexComboBox = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.GradDateTextBox = New System.Windows.Forms.TextBox()
+        Me.nameLabel = New System.Windows.Forms.Label()
+        Me.middlenameTextBox = New System.Windows.Forms.TextBox()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TestLabel = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.AdvisingDataGridView = New System.Windows.Forms.DataGridView()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.AdvisingCalendar = New System.Windows.Forms.MonthCalendar()
+        Me.advisingLabel = New System.Windows.Forms.Label()
         Me.tabStudentStatus.SuspendLayout()
         Me.tabCredentials.SuspendLayout()
         Me.TabAdmission.SuspendLayout()
         Me.tabPersonalInfo.SuspendLayout()
         Me.StudentInfoPanel.SuspendLayout()
         Me.tabApplication.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.SumReportDGV, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox4.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.AdvisingDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tabStudentStatus
@@ -259,7 +353,7 @@ Partial Class StudentInfo
         Me.tabStudentStatus.Location = New System.Drawing.Point(4, 22)
         Me.tabStudentStatus.Name = "tabStudentStatus"
         Me.tabStudentStatus.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabStudentStatus.Size = New System.Drawing.Size(834, 495)
+        Me.tabStudentStatus.Size = New System.Drawing.Size(876, 616)
         Me.tabStudentStatus.TabIndex = 3
         Me.tabStudentStatus.Text = "Student Status"
         Me.tabStudentStatus.UseVisualStyleBackColor = True
@@ -651,7 +745,7 @@ Partial Class StudentInfo
         Me.tabCredentials.Location = New System.Drawing.Point(4, 22)
         Me.tabCredentials.Name = "tabCredentials"
         Me.tabCredentials.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabCredentials.Size = New System.Drawing.Size(834, 495)
+        Me.tabCredentials.Size = New System.Drawing.Size(876, 616)
         Me.tabCredentials.TabIndex = 2
         Me.tabCredentials.Text = "Credentials & Documents"
         Me.tabCredentials.UseVisualStyleBackColor = True
@@ -1318,7 +1412,7 @@ Partial Class StudentInfo
         Me.TabAdmission.Location = New System.Drawing.Point(4, 22)
         Me.TabAdmission.Name = "TabAdmission"
         Me.TabAdmission.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabAdmission.Size = New System.Drawing.Size(834, 495)
+        Me.TabAdmission.Size = New System.Drawing.Size(876, 616)
         Me.TabAdmission.TabIndex = 1
         Me.TabAdmission.Text = "Admission Request"
         Me.TabAdmission.UseVisualStyleBackColor = True
@@ -1482,6 +1576,7 @@ Partial Class StudentInfo
         '
         'tabPersonalInfo
         '
+        Me.tabPersonalInfo.Controls.Add(Me.CheckBox1)
         Me.tabPersonalInfo.Controls.Add(Me.submit)
         Me.tabPersonalInfo.Controls.Add(Me.StudentInfoPanel)
         Me.tabPersonalInfo.Controls.Add(Me.PState)
@@ -1503,7 +1598,6 @@ Partial Class StudentInfo
         Me.tabPersonalInfo.Controls.Add(Me.Label38)
         Me.tabPersonalInfo.Controls.Add(Me.Label39)
         Me.tabPersonalInfo.Controls.Add(Me.Label40)
-        Me.tabPersonalInfo.Controls.Add(Me.chkResident)
         Me.tabPersonalInfo.Controls.Add(Me.Label41)
         Me.tabPersonalInfo.Controls.Add(Me.Label42)
         Me.tabPersonalInfo.Controls.Add(Me.Label43)
@@ -1517,22 +1611,38 @@ Partial Class StudentInfo
         Me.tabPersonalInfo.Location = New System.Drawing.Point(4, 22)
         Me.tabPersonalInfo.Name = "tabPersonalInfo"
         Me.tabPersonalInfo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabPersonalInfo.Size = New System.Drawing.Size(834, 495)
+        Me.tabPersonalInfo.Size = New System.Drawing.Size(876, 616)
         Me.tabPersonalInfo.TabIndex = 0
-        Me.tabPersonalInfo.Text = "Personal Information"
+        Me.tabPersonalInfo.Text = "Add Student"
         Me.tabPersonalInfo.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(15, 361)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(166, 17)
+        Me.CheckBox1.TabIndex = 316
+        Me.CheckBox1.Text = "Mailing address same as local"
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'submit
         '
-        Me.submit.Location = New System.Drawing.Point(491, 411)
+        Me.submit.BackColor = System.Drawing.Color.DarkRed
+        Me.submit.Font = New System.Drawing.Font("Times New Roman", 25.0!)
+        Me.submit.ForeColor = System.Drawing.Color.Snow
+        Me.submit.Location = New System.Drawing.Point(6, 554)
         Me.submit.Name = "submit"
-        Me.submit.Size = New System.Drawing.Size(75, 23)
-        Me.submit.TabIndex = 316
-        Me.submit.Text = "submit"
-        Me.submit.UseVisualStyleBackColor = True
+        Me.submit.Size = New System.Drawing.Size(188, 56)
+        Me.submit.TabIndex = 28
+        Me.submit.Text = "Submit"
+        Me.submit.UseVisualStyleBackColor = False
         '
         'StudentInfoPanel
         '
+        Me.StudentInfoPanel.Controls.Add(Me.lblBirthdayFormat)
+        Me.StudentInfoPanel.Controls.Add(Me.SecondEmailtxtbox)
+        Me.StudentInfoPanel.Controls.Add(Me.Label26)
         Me.StudentInfoPanel.Controls.Add(Me.EthnicDropDown)
         Me.StudentInfoPanel.Controls.Add(Me.txtFirstName)
         Me.StudentInfoPanel.Controls.Add(Me.CitizenshipDropDown)
@@ -1547,7 +1657,6 @@ Partial Class StudentInfo
         Me.StudentInfoPanel.Controls.Add(Me.txtBirthday1)
         Me.StudentInfoPanel.Controls.Add(Me.txtEmail)
         Me.StudentInfoPanel.Controls.Add(Me.lblMiddleName)
-        Me.StudentInfoPanel.Controls.Add(Me.lblBirthdayFormat)
         Me.StudentInfoPanel.Controls.Add(Me.Label55)
         Me.StudentInfoPanel.Controls.Add(Me.txtLastName)
         Me.StudentInfoPanel.Controls.Add(Me.Label56)
@@ -1562,36 +1671,66 @@ Partial Class StudentInfo
         Me.StudentInfoPanel.Controls.Add(Me.Label34)
         Me.StudentInfoPanel.Location = New System.Drawing.Point(6, 6)
         Me.StudentInfoPanel.Name = "StudentInfoPanel"
-        Me.StudentInfoPanel.Size = New System.Drawing.Size(800, 179)
+        Me.StudentInfoPanel.Size = New System.Drawing.Size(800, 201)
         Me.StudentInfoPanel.TabIndex = 52
+        '
+        'lblBirthdayFormat
+        '
+        Me.lblBirthdayFormat.AutoSize = True
+        Me.lblBirthdayFormat.Font = New System.Drawing.Font("Times New Roman", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBirthdayFormat.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.lblBirthdayFormat.Location = New System.Drawing.Point(285, 86)
+        Me.lblBirthdayFormat.Name = "lblBirthdayFormat"
+        Me.lblBirthdayFormat.Size = New System.Drawing.Size(61, 10)
+        Me.lblBirthdayFormat.TabIndex = 319
+        Me.lblBirthdayFormat.Text = "MM-DD-YYYY"
+        '
+        'SecondEmailtxtbox
+        '
+        Me.SecondEmailtxtbox.Location = New System.Drawing.Point(105, 173)
+        Me.SecondEmailtxtbox.Name = "SecondEmailtxtbox"
+        Me.SecondEmailtxtbox.Size = New System.Drawing.Size(258, 20)
+        Me.SecondEmailtxtbox.TabIndex = 8
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(13, 178)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(89, 13)
+        Me.Label26.TabIndex = 318
+        Me.Label26.Text = "Secondary Email:"
         '
         'EthnicDropDown
         '
+        Me.EthnicDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.EthnicDropDown.FormattingEnabled = True
         Me.EthnicDropDown.Items.AddRange(New Object() {"Alaskan Native or American Indian", "African American", "Asian or Pacific Islander", "Caucasian", "Hispanic"})
-        Me.EthnicDropDown.Location = New System.Drawing.Point(513, 48)
+        Me.EthnicDropDown.Location = New System.Drawing.Point(513, 46)
         Me.EthnicDropDown.Name = "EthnicDropDown"
-        Me.EthnicDropDown.Size = New System.Drawing.Size(166, 21)
-        Me.EthnicDropDown.TabIndex = 9
+        Me.EthnicDropDown.Size = New System.Drawing.Size(271, 21)
+        Me.EthnicDropDown.TabIndex = 10
         '
         'txtFirstName
         '
         Me.txtFirstName.Location = New System.Drawing.Point(66, 23)
         Me.txtFirstName.Name = "txtFirstName"
         Me.txtFirstName.Size = New System.Drawing.Size(145, 20)
-        Me.txtFirstName.TabIndex = 2
+        Me.txtFirstName.TabIndex = 1
         '
         'CitizenshipDropDown
         '
+        Me.CitizenshipDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CitizenshipDropDown.FormattingEnabled = True
         Me.CitizenshipDropDown.Items.AddRange(New Object() {"U.S. Citizen", "Resident Alien", "Non-Resident Alien"})
         Me.CitizenshipDropDown.Location = New System.Drawing.Point(105, 116)
         Me.CitizenshipDropDown.Name = "CitizenshipDropDown"
         Me.CitizenshipDropDown.Size = New System.Drawing.Size(258, 21)
-        Me.CitizenshipDropDown.TabIndex = 11
+        Me.CitizenshipDropDown.TabIndex = 6
         '
         'OriginDropDown
         '
+        Me.OriginDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.OriginDropDown.FormattingEnabled = True
         Me.OriginDropDown.Items.AddRange(New Object() {"Abkhazia – Republic of Abkhazia[5]", "Afghanistan Afghanistan – Islamic Republic of Afghanistan", "the United Kingdom Akrotiri and Dhekelia – Sovereign Base Areas of Akrotiri and D" &
                 "hekelia (UK overseas territory)", "Åland Islands Åland – Åland Islands (Autonomous province of Finland)", "Albania Albania – Republic of Albania", "Algeria Algeria – People's Democratic Republic of Algeria", "American Samoa American Samoa – Territory of American Samoa (US territory)", "Andorra Andorra – Principality of Andorra", "Angola Angola – Republic of Angola", "Anguilla Anguilla (UK overseas territory)", "Antigua and Barbuda Antigua and Barbuda", "Argentina Argentina – Argentine Republic[11]", "Armenia Armenia – Republic of Armenia", "Aruba Aruba (Self-governing country in the Kingdom of the Netherlands)", "the United Kingdom Ascension Island (Dependency of the UK overseas territory of S" &
@@ -1622,42 +1761,44 @@ Partial Class StudentInfo
                 "nch overseas collectivity)", "Western Sahara Western Sahara[40]", "Yemen Yemen – Republic of Yemen", """Zaire"", see Democratic Republic of the Congo", "Zambia Zambia – Republic of Zambia", "Zimbabwe Zimbabwe – Republic of Zimbabwe"})
         Me.OriginDropDown.Location = New System.Drawing.Point(513, 18)
         Me.OriginDropDown.Name = "OriginDropDown"
-        Me.OriginDropDown.Size = New System.Drawing.Size(166, 21)
-        Me.OriginDropDown.TabIndex = 8
+        Me.OriginDropDown.Size = New System.Drawing.Size(271, 21)
+        Me.OriginDropDown.TabIndex = 9
         '
         'lblLastName
         '
         Me.lblLastName.AutoSize = True
         Me.lblLastName.Location = New System.Drawing.Point(11, 83)
         Me.lblLastName.Name = "lblLastName"
-        Me.lblLastName.Size = New System.Drawing.Size(27, 13)
+        Me.lblLastName.Size = New System.Drawing.Size(31, 13)
         Me.lblLastName.TabIndex = 201
-        Me.lblLastName.Text = "Last"
+        Me.lblLastName.Text = "Last*"
         '
         'GenderDropDown
         '
+        Me.GenderDropDown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.GenderDropDown.FormattingEnabled = True
         Me.GenderDropDown.Items.AddRange(New Object() {"Male", "Female"})
-        Me.GenderDropDown.Location = New System.Drawing.Point(514, 75)
+        Me.GenderDropDown.Location = New System.Drawing.Point(514, 74)
         Me.GenderDropDown.Name = "GenderDropDown"
-        Me.GenderDropDown.Size = New System.Drawing.Size(166, 21)
-        Me.GenderDropDown.TabIndex = 10
+        Me.GenderDropDown.Size = New System.Drawing.Size(270, 21)
+        Me.GenderDropDown.TabIndex = 11
         '
         'txtSSN
         '
         Me.txtSSN.Location = New System.Drawing.Point(274, 33)
+        Me.txtSSN.Mask = "000-00-0000"
         Me.txtSSN.Name = "txtSSN"
         Me.txtSSN.Size = New System.Drawing.Size(101, 20)
-        Me.txtSSN.TabIndex = 6
+        Me.txtSSN.TabIndex = 4
         '
         'lblFirstName
         '
         Me.lblFirstName.AutoSize = True
         Me.lblFirstName.Location = New System.Drawing.Point(13, 25)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(26, 13)
+        Me.lblFirstName.Size = New System.Drawing.Size(30, 13)
         Me.lblFirstName.TabIndex = 202
-        Me.lblFirstName.Text = "First"
+        Me.lblFirstName.Text = "First*"
         '
         'txtPPhone
         '
@@ -1665,15 +1806,15 @@ Partial Class StudentInfo
         Me.txtPPhone.Mask = "(999) 000-0000"
         Me.txtPPhone.Name = "txtPPhone"
         Me.txtPPhone.Size = New System.Drawing.Size(85, 20)
-        Me.txtPPhone.TabIndex = 29
+        Me.txtPPhone.TabIndex = 14
         '
         'txtWorkPhone
         '
-        Me.txtWorkPhone.Location = New System.Drawing.Point(514, 128)
+        Me.txtWorkPhone.Location = New System.Drawing.Point(514, 126)
         Me.txtWorkPhone.Mask = "(999) 000-0000"
         Me.txtWorkPhone.Name = "txtWorkPhone"
         Me.txtWorkPhone.Size = New System.Drawing.Size(85, 20)
-        Me.txtWorkPhone.TabIndex = 28
+        Me.txtWorkPhone.TabIndex = 13
         '
         'txtCurrentPhone
         '
@@ -1681,21 +1822,23 @@ Partial Class StudentInfo
         Me.txtCurrentPhone.Mask = "(999) 000-0000"
         Me.txtCurrentPhone.Name = "txtCurrentPhone"
         Me.txtCurrentPhone.Size = New System.Drawing.Size(85, 20)
-        Me.txtCurrentPhone.TabIndex = 27
+        Me.txtCurrentPhone.TabIndex = 12
         '
         'txtBirthday1
         '
         Me.txtBirthday1.Location = New System.Drawing.Point(274, 61)
+        Me.txtBirthday1.Mask = "00/00/0000"
         Me.txtBirthday1.Name = "txtBirthday1"
         Me.txtBirthday1.Size = New System.Drawing.Size(101, 20)
-        Me.txtBirthday1.TabIndex = 7
+        Me.txtBirthday1.TabIndex = 5
+        Me.txtBirthday1.ValidatingType = GetType(Date)
         '
         'txtEmail
         '
         Me.txtEmail.Location = New System.Drawing.Point(105, 145)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(258, 20)
-        Me.txtEmail.TabIndex = 31
+        Me.txtEmail.TabIndex = 7
         '
         'lblMiddleName
         '
@@ -1705,17 +1848,6 @@ Partial Class StudentInfo
         Me.lblMiddleName.Size = New System.Drawing.Size(38, 13)
         Me.lblMiddleName.TabIndex = 203
         Me.lblMiddleName.Text = "Middle"
-        '
-        'lblBirthdayFormat
-        '
-        Me.lblBirthdayFormat.AutoSize = True
-        Me.lblBirthdayFormat.Font = New System.Drawing.Font("Times New Roman", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBirthdayFormat.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.lblBirthdayFormat.Location = New System.Drawing.Point(296, 86)
-        Me.lblBirthdayFormat.Name = "lblBirthdayFormat"
-        Me.lblBirthdayFormat.Size = New System.Drawing.Size(60, 10)
-        Me.lblBirthdayFormat.TabIndex = 316
-        Me.lblBirthdayFormat.Text = "YYYY-MM-DD"
         '
         'Label55
         '
@@ -1728,26 +1860,26 @@ Partial Class StudentInfo
         '
         'txtLastName
         '
-        Me.txtLastName.Location = New System.Drawing.Point(66, 82)
+        Me.txtLastName.Location = New System.Drawing.Point(66, 81)
         Me.txtLastName.Name = "txtLastName"
         Me.txtLastName.Size = New System.Drawing.Size(145, 20)
-        Me.txtLastName.TabIndex = 1
+        Me.txtLastName.TabIndex = 3
         '
         'Label56
         '
         Me.Label56.AutoSize = True
         Me.Label56.Location = New System.Drawing.Point(396, 75)
         Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(45, 13)
+        Me.Label56.Size = New System.Drawing.Size(49, 13)
         Me.Label56.TabIndex = 210
-        Me.Label56.Text = "Gender:"
+        Me.Label56.Text = "Gender*:"
         '
         'txtMiddleName
         '
-        Me.txtMiddleName.Location = New System.Drawing.Point(66, 53)
+        Me.txtMiddleName.Location = New System.Drawing.Point(66, 52)
         Me.txtMiddleName.Name = "txtMiddleName"
         Me.txtMiddleName.Size = New System.Drawing.Size(145, 20)
-        Me.txtMiddleName.TabIndex = 3
+        Me.txtMiddleName.TabIndex = 2
         '
         'Label57
         '
@@ -1790,9 +1922,9 @@ Partial Class StudentInfo
         Me.lblDOB.AutoSize = True
         Me.lblDOB.Location = New System.Drawing.Point(229, 63)
         Me.lblDOB.Name = "lblDOB"
-        Me.lblDOB.Size = New System.Drawing.Size(30, 13)
+        Me.lblDOB.Size = New System.Drawing.Size(34, 13)
         Me.lblDOB.TabIndex = 207
-        Me.lblDOB.Text = "DOB"
+        Me.lblDOB.Text = "DOB*"
         '
         'Label35
         '
@@ -1823,104 +1955,107 @@ Partial Class StudentInfo
         '
         'PState
         '
+        Me.PState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.PState.FormattingEnabled = True
-        Me.PState.Items.AddRange(New Object() {"ALABAMA", "ALASKA", "AMERICAN SAMOA", "ARIZONA", "ARKANSAS", "CALIFORNIA", "COLORADO", "CONNECTICUT", "DELAWARE", "DISTRICT OF COLUMBIA", "FEDERATED STATES OF MICRONESIA", "FLORIDA", "GEORGIA", "GUAM", "HAWAII", "IDAHO", "ILLINOIS", "INDIANA", "IOWA", "KANSAS", "KENTUCKY", "LOUISIANA", "MAINE", "MARSHALL ISLANDS", "MARYLAND", "MASSACHUSETTS", "MICHIGAN", "MINNESOTA", "MISSISSIPPI", "MISSOURI", "MONTANA", "NEBRASKA", "NEVADA", "NEW HAMPSHIRE", "NEW JERSEY", "NEW MEXICO", "NEW YORK", "NORTH CAROLINA", "NORTH DAKOTA", "NORTHERN MARIANA ISLANDS", "OHIO", "OKLAHOMA", "OREGON", "PALAU", "PENNSYLVANIA", "PUERTO RICO", "RHODE ISLAND", "SOUTH CAROLINA", "SOUTH DAKOTA", "TENNESSEE", "TEXAS", "UTAH", "VERMONT", "VIRGIN ISLANDS", "VIRGINIA", "WASHINGTON", "WEST VIRGINIA", "WISCONSIN", "WYOMING"})
-        Me.PState.Location = New System.Drawing.Point(51, 418)
+        Me.PState.Items.AddRange(New Object() {"", "AK", "AL", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"})
+        Me.PState.Location = New System.Drawing.Point(52, 470)
         Me.PState.Name = "PState"
         Me.PState.Size = New System.Drawing.Size(121, 21)
-        Me.PState.TabIndex = 23
+        Me.PState.TabIndex = 21
         '
         'Mstate
         '
+        Me.Mstate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Mstate.FormattingEnabled = True
-        Me.Mstate.Items.AddRange(New Object() {"ALABAMA", "ALASKA", "AMERICAN SAMOA", "ARIZONA", "ARKANSAS", "CALIFORNIA", "COLORADO", "CONNECTICUT", "DELAWARE", "DISTRICT OF COLUMBIA", "FEDERATED STATES OF MICRONESIA", "FLORIDA", "GEORGIA", "GUAM", "HAWAII", "IDAHO", "ILLINOIS", "INDIANA", "IOWA", "KANSAS", "KENTUCKY", "LOUISIANA", "MAINE", "MARSHALL ISLANDS", "MARYLAND", "MASSACHUSETTS", "MICHIGAN", "MINNESOTA", "MISSISSIPPI", "MISSOURI", "MONTANA", "NEBRASKA", "NEVADA", "NEW HAMPSHIRE", "NEW JERSEY", "NEW MEXICO", "NEW YORK", "NORTH CAROLINA", "NORTH DAKOTA", "NORTHERN MARIANA ISLANDS", "OHIO", "OKLAHOMA", "OREGON", "PALAU", "PENNSYLVANIA", "PUERTO RICO", "RHODE ISLAND", "SOUTH CAROLINA", "SOUTH DAKOTA", "TENNESSEE", "TEXAS", "UTAH", "VERMONT", "VIRGIN ISLANDS", "VIRGINIA", "WASHINGTON", "WEST VIRGINIA", "WISCONSIN", "WYOMING"})
-        Me.Mstate.Location = New System.Drawing.Point(445, 276)
+        Me.Mstate.Items.AddRange(New Object() {"", "AK", "AL", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"})
+        Me.Mstate.Location = New System.Drawing.Point(445, 300)
         Me.Mstate.Name = "Mstate"
         Me.Mstate.Size = New System.Drawing.Size(121, 21)
-        Me.Mstate.TabIndex = 19
+        Me.Mstate.TabIndex = 25
         '
         'cbxPState
         '
+        Me.cbxPState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbxPState.FormattingEnabled = True
-        Me.cbxPState.Items.AddRange(New Object() {"ALABAMA", "ALASKA", "AMERICAN SAMOA", "ARIZONA", "ARKANSAS", "CALIFORNIA", "COLORADO", "CONNECTICUT", "DELAWARE", "DISTRICT OF COLUMBIA", "FEDERATED STATES OF MICRONESIA", "FLORIDA", "GEORGIA", "GUAM", "HAWAII", "IDAHO", "ILLINOIS", "INDIANA", "IOWA", "KANSAS", "KENTUCKY", "LOUISIANA", "MAINE", "MARSHALL ISLANDS", "MARYLAND", "MASSACHUSETTS", "MICHIGAN", "MINNESOTA", "MISSISSIPPI", "MISSOURI", "MONTANA", "NEBRASKA", "NEVADA", "NEW HAMPSHIRE", "NEW JERSEY", "NEW MEXICO", "NEW YORK", "NORTH CAROLINA", "NORTH DAKOTA", "NORTHERN MARIANA ISLANDS", "OHIO", "OKLAHOMA", "OREGON", "PALAU", "PENNSYLVANIA", "PUERTO RICO", "RHODE ISLAND", "SOUTH CAROLINA", "SOUTH DAKOTA", "TENNESSEE", "TEXAS", "UTAH", "VERMONT", "VIRGIN ISLANDS", "VIRGINIA", "WASHINGTON", "WEST VIRGINIA", "WISCONSIN", "WYOMING"})
-        Me.cbxPState.Location = New System.Drawing.Point(50, 274)
+        Me.cbxPState.Items.AddRange(New Object() {"AK", "AL", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"})
+        Me.cbxPState.Location = New System.Drawing.Point(50, 298)
         Me.cbxPState.Name = "cbxPState"
         Me.cbxPState.Size = New System.Drawing.Size(121, 21)
-        Me.cbxPState.TabIndex = 14
+        Me.cbxPState.TabIndex = 17
         '
         'txtPZipCode
         '
-        Me.txtPZipCode.Location = New System.Drawing.Point(49, 301)
+        Me.txtPZipCode.Location = New System.Drawing.Point(49, 325)
         Me.txtPZipCode.Mask = "00000"
         Me.txtPZipCode.Name = "txtPZipCode"
         Me.txtPZipCode.Size = New System.Drawing.Size(75, 20)
-        Me.txtPZipCode.TabIndex = 15
+        Me.txtPZipCode.TabIndex = 18
         Me.txtPZipCode.ValidatingType = GetType(Integer)
         '
         'MZip
         '
-        Me.MZip.Location = New System.Drawing.Point(446, 303)
+        Me.MZip.Location = New System.Drawing.Point(446, 327)
         Me.MZip.Mask = "00000"
         Me.MZip.Name = "MZip"
         Me.MZip.Size = New System.Drawing.Size(75, 20)
-        Me.MZip.TabIndex = 20
+        Me.MZip.TabIndex = 26
         Me.MZip.ValidatingType = GetType(Integer)
         '
         'PZip
         '
-        Me.PZip.Location = New System.Drawing.Point(51, 445)
+        Me.PZip.Location = New System.Drawing.Point(52, 497)
         Me.PZip.Mask = "00000"
         Me.PZip.Name = "PZip"
         Me.PZip.Size = New System.Drawing.Size(75, 20)
-        Me.PZip.TabIndex = 24
+        Me.PZip.TabIndex = 22
         Me.PZip.ValidatingType = GetType(Integer)
         '
         'Mcity
         '
-        Me.Mcity.Location = New System.Drawing.Point(445, 250)
+        Me.Mcity.Location = New System.Drawing.Point(445, 274)
         Me.Mcity.Name = "Mcity"
         Me.Mcity.Size = New System.Drawing.Size(273, 20)
-        Me.Mcity.TabIndex = 18
+        Me.Mcity.TabIndex = 24
         '
         'Maddress
         '
-        Me.Maddress.Location = New System.Drawing.Point(445, 224)
+        Me.Maddress.Location = New System.Drawing.Point(445, 248)
         Me.Maddress.Name = "Maddress"
         Me.Maddress.Size = New System.Drawing.Size(273, 20)
-        Me.Maddress.TabIndex = 17
+        Me.Maddress.TabIndex = 23
         '
         'Pcity
         '
-        Me.Pcity.Location = New System.Drawing.Point(51, 392)
+        Me.Pcity.Location = New System.Drawing.Point(52, 444)
         Me.Pcity.Name = "Pcity"
         Me.Pcity.Size = New System.Drawing.Size(273, 20)
-        Me.Pcity.TabIndex = 22
+        Me.Pcity.TabIndex = 20
         '
         'Paddress
         '
-        Me.Paddress.Location = New System.Drawing.Point(51, 366)
+        Me.Paddress.Location = New System.Drawing.Point(52, 418)
         Me.Paddress.Name = "Paddress"
         Me.Paddress.Size = New System.Drawing.Size(273, 20)
-        Me.Paddress.TabIndex = 21
+        Me.Paddress.TabIndex = 19
         '
         'txtPCity
         '
-        Me.txtPCity.Location = New System.Drawing.Point(50, 248)
+        Me.txtPCity.Location = New System.Drawing.Point(50, 272)
         Me.txtPCity.Name = "txtPCity"
         Me.txtPCity.Size = New System.Drawing.Size(273, 20)
-        Me.txtPCity.TabIndex = 13
+        Me.txtPCity.TabIndex = 16
         '
         'txtPAddress
         '
-        Me.txtPAddress.Location = New System.Drawing.Point(50, 222)
+        Me.txtPAddress.Location = New System.Drawing.Point(50, 246)
         Me.txtPAddress.Name = "txtPAddress"
         Me.txtPAddress.Size = New System.Drawing.Size(273, 20)
-        Me.txtPAddress.TabIndex = 12
+        Me.txtPAddress.TabIndex = 15
         '
         'Label66
         '
         Me.Label66.AutoSize = True
-        Me.Label66.Location = New System.Drawing.Point(333, 333)
+        Me.Label66.Location = New System.Drawing.Point(6, 381)
         Me.Label66.Name = "Label66"
         Me.Label66.Size = New System.Drawing.Size(457, 13)
         Me.Label66.TabIndex = 315
@@ -1929,7 +2064,7 @@ Partial Class StudentInfo
         'Label65
         '
         Me.Label65.AutoSize = True
-        Me.Label65.Location = New System.Drawing.Point(9, 186)
+        Me.Label65.Location = New System.Drawing.Point(9, 210)
         Me.Label65.Name = "Label65"
         Me.Label65.Size = New System.Drawing.Size(781, 13)
         Me.Label65.TabIndex = 314
@@ -1939,7 +2074,7 @@ Partial Class StudentInfo
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(407, 306)
+        Me.Label36.Location = New System.Drawing.Point(407, 330)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(22, 13)
         Me.Label36.TabIndex = 222
@@ -1948,7 +2083,7 @@ Partial Class StudentInfo
         'Label37
         '
         Me.Label37.AutoSize = True
-        Me.Label37.Location = New System.Drawing.Point(405, 279)
+        Me.Label37.Location = New System.Drawing.Point(405, 303)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(32, 13)
         Me.Label37.TabIndex = 221
@@ -1957,7 +2092,7 @@ Partial Class StudentInfo
         'Label38
         '
         Me.Label38.AutoSize = True
-        Me.Label38.Location = New System.Drawing.Point(405, 251)
+        Me.Label38.Location = New System.Drawing.Point(405, 275)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(24, 13)
         Me.Label38.TabIndex = 220
@@ -1966,7 +2101,7 @@ Partial Class StudentInfo
         'Label39
         '
         Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(404, 226)
+        Me.Label39.Location = New System.Drawing.Point(404, 250)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(35, 13)
         Me.Label39.TabIndex = 219
@@ -1975,27 +2110,16 @@ Partial Class StudentInfo
         'Label40
         '
         Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(404, 209)
+        Me.Label40.Location = New System.Drawing.Point(404, 233)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(84, 13)
         Me.Label40.TabIndex = 218
         Me.Label40.Text = "Mailing Address:"
         '
-        'chkResident
-        '
-        Me.chkResident.AutoSize = True
-        Me.chkResident.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkResident.Location = New System.Drawing.Point(675, 448)
-        Me.chkResident.Name = "chkResident"
-        Me.chkResident.Size = New System.Drawing.Size(115, 17)
-        Me.chkResident.TabIndex = 26
-        Me.chkResident.Text = "Arkansas Resident"
-        Me.chkResident.UseVisualStyleBackColor = True
-        '
         'Label41
         '
         Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(13, 448)
+        Me.Label41.Location = New System.Drawing.Point(14, 500)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(22, 13)
         Me.Label41.TabIndex = 227
@@ -2004,7 +2128,7 @@ Partial Class StudentInfo
         'Label42
         '
         Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(11, 421)
+        Me.Label42.Location = New System.Drawing.Point(12, 473)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(32, 13)
         Me.Label42.TabIndex = 226
@@ -2013,7 +2137,7 @@ Partial Class StudentInfo
         'Label43
         '
         Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(11, 393)
+        Me.Label43.Location = New System.Drawing.Point(12, 445)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(24, 13)
         Me.Label43.TabIndex = 225
@@ -2022,7 +2146,7 @@ Partial Class StudentInfo
         'Label44
         '
         Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(10, 368)
+        Me.Label44.Location = New System.Drawing.Point(11, 420)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(35, 13)
         Me.Label44.TabIndex = 224
@@ -2031,7 +2155,7 @@ Partial Class StudentInfo
         'Label45
         '
         Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(10, 350)
+        Me.Label45.Location = New System.Drawing.Point(11, 402)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(102, 13)
         Me.Label45.TabIndex = 223
@@ -2040,7 +2164,7 @@ Partial Class StudentInfo
         'Label49
         '
         Me.Label49.AutoSize = True
-        Me.Label49.Location = New System.Drawing.Point(12, 304)
+        Me.Label49.Location = New System.Drawing.Point(12, 328)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(22, 13)
         Me.Label49.TabIndex = 216
@@ -2049,7 +2173,7 @@ Partial Class StudentInfo
         'Label51
         '
         Me.Label51.AutoSize = True
-        Me.Label51.Location = New System.Drawing.Point(10, 277)
+        Me.Label51.Location = New System.Drawing.Point(10, 301)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(32, 13)
         Me.Label51.TabIndex = 215
@@ -2058,7 +2182,7 @@ Partial Class StudentInfo
         'Label52
         '
         Me.Label52.AutoSize = True
-        Me.Label52.Location = New System.Drawing.Point(10, 249)
+        Me.Label52.Location = New System.Drawing.Point(10, 273)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(24, 13)
         Me.Label52.TabIndex = 214
@@ -2067,7 +2191,7 @@ Partial Class StudentInfo
         'Label53
         '
         Me.Label53.AutoSize = True
-        Me.Label53.Location = New System.Drawing.Point(9, 224)
+        Me.Label53.Location = New System.Drawing.Point(9, 248)
         Me.Label53.Name = "Label53"
         Me.Label53.Size = New System.Drawing.Size(35, 13)
         Me.Label53.TabIndex = 213
@@ -2076,7 +2200,7 @@ Partial Class StudentInfo
         'Lo
         '
         Me.Lo.AutoSize = True
-        Me.Lo.Location = New System.Drawing.Point(8, 207)
+        Me.Lo.Location = New System.Drawing.Point(8, 231)
         Me.Lo.Name = "Lo"
         Me.Lo.Size = New System.Drawing.Size(77, 13)
         Me.Lo.TabIndex = 212
@@ -2085,20 +2209,839 @@ Partial Class StudentInfo
         'tabApplication
         '
         Me.tabApplication.Controls.Add(Me.tabPersonalInfo)
+        Me.tabApplication.Controls.Add(Me.TabPage1)
+        Me.tabApplication.Controls.Add(Me.TabPage2)
         Me.tabApplication.Controls.Add(Me.TabAdmission)
         Me.tabApplication.Controls.Add(Me.tabCredentials)
         Me.tabApplication.Controls.Add(Me.tabStudentStatus)
-        Me.tabApplication.Location = New System.Drawing.Point(12, 12)
+        Me.tabApplication.Location = New System.Drawing.Point(12, 3)
         Me.tabApplication.Name = "tabApplication"
         Me.tabApplication.SelectedIndex = 0
-        Me.tabApplication.Size = New System.Drawing.Size(842, 521)
+        Me.tabApplication.Size = New System.Drawing.Size(884, 642)
         Me.tabApplication.TabIndex = 51
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.SearchLabel)
+        Me.TabPage1.Controls.Add(Me.SearchTextbox)
+        Me.TabPage1.Controls.Add(Me.Label25)
+        Me.TabPage1.Controls.Add(Me.StudentIDTextbox)
+        Me.TabPage1.Controls.Add(Me.StudentIDTxtBox)
+        Me.TabPage1.Controls.Add(Me.Label24)
+        Me.TabPage1.Controls.Add(Me.BirthDateTextBox)
+        Me.TabPage1.Controls.Add(Me.Label23)
+        Me.TabPage1.Controls.Add(Me.EmailTextBox)
+        Me.TabPage1.Controls.Add(Me.Label22)
+        Me.TabPage1.Controls.Add(Me.ZipCodeTextBox)
+        Me.TabPage1.Controls.Add(Me.StateTextBox)
+        Me.TabPage1.Controls.Add(Me.Label1)
+        Me.TabPage1.Controls.Add(Me.Label21)
+        Me.TabPage1.Controls.Add(Me.CityTextBox)
+        Me.TabPage1.Controls.Add(Me.Label19)
+        Me.TabPage1.Controls.Add(Me.AddressTextBox)
+        Me.TabPage1.Controls.Add(Me.Label18)
+        Me.TabPage1.Controls.Add(Me.SSNTextBox)
+        Me.TabPage1.Controls.Add(Me.Label17)
+        Me.TabPage1.Controls.Add(Me.LastnameTextBox)
+        Me.TabPage1.Controls.Add(Me.Label16)
+        Me.TabPage1.Controls.Add(Me.Label6)
+        Me.TabPage1.Controls.Add(Me.FirstnameTExtBox)
+        Me.TabPage1.Controls.Add(Me.SumReportDGV)
+        Me.TabPage1.Controls.Add(Me.GroupBox4)
+        Me.TabPage1.Controls.Add(Me.GroupBox3)
+        Me.TabPage1.Controls.Add(Me.AddStudentButton)
+        Me.TabPage1.Controls.Add(Me.GroupBox2)
+        Me.TabPage1.Controls.Add(Me.CheckBox9)
+        Me.TabPage1.Controls.Add(Me.CheckBox8)
+        Me.TabPage1.Controls.Add(Me.EnrollCheckBox)
+        Me.TabPage1.Controls.Add(Me.AcceptCheckBox)
+        Me.TabPage1.Controls.Add(Me.DenyCheckBox)
+        Me.TabPage1.Controls.Add(Me.GroupBox1)
+        Me.TabPage1.Controls.Add(Me.HoldCheckBox)
+        Me.TabPage1.Controls.Add(Me.SexComboBox)
+        Me.TabPage1.Controls.Add(Me.Label11)
+        Me.TabPage1.Controls.Add(Me.Label9)
+        Me.TabPage1.Controls.Add(Me.Label5)
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.GradDateTextBox)
+        Me.TabPage1.Controls.Add(Me.nameLabel)
+        Me.TabPage1.Controls.Add(Me.middlenameTextBox)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(876, 616)
+        Me.TabPage1.TabIndex = 4
+        Me.TabPage1.Text = "Update Student"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'SearchLabel
+        '
+        Me.SearchLabel.AutoSize = True
+        Me.SearchLabel.Location = New System.Drawing.Point(12, 339)
+        Me.SearchLabel.Name = "SearchLabel"
+        Me.SearchLabel.Size = New System.Drawing.Size(44, 13)
+        Me.SearchLabel.TabIndex = 116
+        Me.SearchLabel.Text = "Search:"
+        '
+        'SearchTextbox
+        '
+        Me.SearchTextbox.Location = New System.Drawing.Point(61, 336)
+        Me.SearchTextbox.Name = "SearchTextbox"
+        Me.SearchTextbox.Size = New System.Drawing.Size(114, 20)
+        Me.SearchTextbox.TabIndex = 115
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(12, -83)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(61, 13)
+        Me.Label25.TabIndex = 114
+        Me.Label25.Text = "Student ID:"
+        '
+        'StudentIDTextbox
+        '
+        Me.StudentIDTextbox.Location = New System.Drawing.Point(75, -86)
+        Me.StudentIDTextbox.Name = "StudentIDTextbox"
+        Me.StudentIDTextbox.Size = New System.Drawing.Size(100, 20)
+        Me.StudentIDTextbox.TabIndex = 113
+        '
+        'StudentIDTxtBox
+        '
+        Me.StudentIDTxtBox.Enabled = False
+        Me.StudentIDTxtBox.Location = New System.Drawing.Point(84, 5)
+        Me.StudentIDTxtBox.Name = "StudentIDTxtBox"
+        Me.StudentIDTxtBox.Size = New System.Drawing.Size(100, 20)
+        Me.StudentIDTxtBox.TabIndex = 112
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(19, 10)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(58, 13)
+        Me.Label24.TabIndex = 111
+        Me.Label24.Text = "Student ID"
+        '
+        'BirthDateTextBox
+        '
+        Me.BirthDateTextBox.Location = New System.Drawing.Point(84, 265)
+        Me.BirthDateTextBox.Name = "BirthDateTextBox"
+        Me.BirthDateTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.BirthDateTextBox.TabIndex = 110
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(29, 268)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(49, 13)
+        Me.Label23.TabIndex = 109
+        Me.Label23.Text = "Birthdate"
+        '
+        'EmailTextBox
+        '
+        Me.EmailTextBox.Location = New System.Drawing.Point(84, 239)
+        Me.EmailTextBox.Name = "EmailTextBox"
+        Me.EmailTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.EmailTextBox.TabIndex = 108
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(46, 242)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(32, 13)
+        Me.Label22.TabIndex = 107
+        Me.Label22.Text = "Email"
+        '
+        'ZipCodeTextBox
+        '
+        Me.ZipCodeTextBox.Location = New System.Drawing.Point(84, 213)
+        Me.ZipCodeTextBox.Name = "ZipCodeTextBox"
+        Me.ZipCodeTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.ZipCodeTextBox.TabIndex = 106
+        '
+        'StateTextBox
+        '
+        Me.StateTextBox.Location = New System.Drawing.Point(84, 187)
+        Me.StateTextBox.Name = "StateTextBox"
+        Me.StateTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.StateTextBox.TabIndex = 105
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(33, 216)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(50, 13)
+        Me.Label1.TabIndex = 104
+        Me.Label1.Text = "Zip Code"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(41, 190)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(32, 13)
+        Me.Label21.TabIndex = 103
+        Me.Label21.Text = "State"
+        '
+        'CityTextBox
+        '
+        Me.CityTextBox.Location = New System.Drawing.Point(84, 161)
+        Me.CityTextBox.Name = "CityTextBox"
+        Me.CityTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.CityTextBox.TabIndex = 102
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(49, 164)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(24, 13)
+        Me.Label19.TabIndex = 101
+        Me.Label19.Text = "City"
+        '
+        'AddressTextBox
+        '
+        Me.AddressTextBox.Location = New System.Drawing.Point(84, 135)
+        Me.AddressTextBox.Name = "AddressTextBox"
+        Me.AddressTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.AddressTextBox.TabIndex = 100
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(33, 138)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(45, 13)
+        Me.Label18.TabIndex = 99
+        Me.Label18.Text = "Address"
+        '
+        'SSNTextBox
+        '
+        Me.SSNTextBox.Location = New System.Drawing.Point(84, 109)
+        Me.SSNTextBox.Name = "SSNTextBox"
+        Me.SSNTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.SSNTextBox.TabIndex = 98
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(49, 112)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(29, 13)
+        Me.Label17.TabIndex = 97
+        Me.Label17.Text = "SSN"
+        '
+        'LastnameTextBox
+        '
+        Me.LastnameTextBox.Location = New System.Drawing.Point(84, 83)
+        Me.LastnameTextBox.Name = "LastnameTextBox"
+        Me.LastnameTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.LastnameTextBox.TabIndex = 96
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(20, 86)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(58, 13)
+        Me.Label16.TabIndex = 95
+        Me.Label16.Text = "Last Name"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(21, 34)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(57, 13)
+        Me.Label6.TabIndex = 94
+        Me.Label6.Text = "First Name"
+        '
+        'FirstnameTExtBox
+        '
+        Me.FirstnameTExtBox.Location = New System.Drawing.Point(84, 31)
+        Me.FirstnameTExtBox.Name = "FirstnameTExtBox"
+        Me.FirstnameTExtBox.Size = New System.Drawing.Size(100, 20)
+        Me.FirstnameTExtBox.TabIndex = 93
+        '
+        'SumReportDGV
+        '
+        Me.SumReportDGV.AllowUserToAddRows = False
+        Me.SumReportDGV.AllowUserToDeleteRows = False
+        Me.SumReportDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.SumReportDGV.Location = New System.Drawing.Point(12, 371)
+        Me.SumReportDGV.Name = "SumReportDGV"
+        Me.SumReportDGV.ReadOnly = True
+        Me.SumReportDGV.Size = New System.Drawing.Size(858, 237)
+        Me.SumReportDGV.TabIndex = 92
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.RadioButton7)
+        Me.GroupBox4.Controls.Add(Me.RadioButton6)
+        Me.GroupBox4.Controls.Add(Me.RadioButton5)
+        Me.GroupBox4.Controls.Add(Me.RadioButton4)
+        Me.GroupBox4.Controls.Add(Me.RadioButton3)
+        Me.GroupBox4.Controls.Add(Me.RadioButton2)
+        Me.GroupBox4.Controls.Add(Me.RadioButton1)
+        Me.GroupBox4.Location = New System.Drawing.Point(488, 144)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(350, 183)
+        Me.GroupBox4.TabIndex = 91
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Applicant Status"
+        '
+        'RadioButton7
+        '
+        Me.RadioButton7.AutoSize = True
+        Me.RadioButton7.Location = New System.Drawing.Point(6, 61)
+        Me.RadioButton7.Name = "RadioButton7"
+        Me.RadioButton7.Size = New System.Drawing.Size(111, 17)
+        Me.RadioButton7.TabIndex = 52
+        Me.RadioButton7.TabStop = True
+        Me.RadioButton7.Text = "Admitted, No reply"
+        Me.RadioButton7.UseVisualStyleBackColor = True
+        '
+        'RadioButton6
+        '
+        Me.RadioButton6.AutoSize = True
+        Me.RadioButton6.Location = New System.Drawing.Point(6, 82)
+        Me.RadioButton6.Name = "RadioButton6"
+        Me.RadioButton6.Size = New System.Drawing.Size(109, 17)
+        Me.RadioButton6.TabIndex = 51
+        Me.RadioButton6.TabStop = True
+        Me.RadioButton6.Text = "Denied Admission"
+        Me.RadioButton6.UseVisualStyleBackColor = True
+        '
+        'RadioButton5
+        '
+        Me.RadioButton5.AutoSize = True
+        Me.RadioButton5.Location = New System.Drawing.Point(6, 151)
+        Me.RadioButton5.Name = "RadioButton5"
+        Me.RadioButton5.Size = New System.Drawing.Size(153, 17)
+        Me.RadioButton5.TabIndex = 50
+        Me.RadioButton5.TabStop = True
+        Me.RadioButton5.Text = "Admitted/Student Declined"
+        Me.RadioButton5.UseVisualStyleBackColor = True
+        '
+        'RadioButton4
+        '
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Location = New System.Drawing.Point(6, 128)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(113, 17)
+        Me.RadioButton4.TabIndex = 49
+        Me.RadioButton4.TabStop = True
+        Me.RadioButton4.Text = "No Decision Made"
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(6, 105)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(64, 17)
+        Me.RadioButton3.TabIndex = 48
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "On Hold"
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(6, 42)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(136, 17)
+        Me.RadioButton2.TabIndex = 47
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "Admitted and Accepted"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(6, 19)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(153, 17)
+        Me.RadioButton1.TabIndex = 46
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Admitted/Student Declined"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Label8)
+        Me.GroupBox3.Controls.Add(Me.UndergradInstitutionTextBox)
+        Me.GroupBox3.Controls.Add(Me.CampusTextBox)
+        Me.GroupBox3.Controls.Add(Me.UGPATextBox)
+        Me.GroupBox3.Controls.Add(Me.WorkTextBox)
+        Me.GroupBox3.Controls.Add(Me.UndergradMajorTextBox)
+        Me.GroupBox3.Controls.Add(Me.Label10)
+        Me.GroupBox3.Controls.Add(Me.Label12)
+        Me.GroupBox3.Controls.Add(Me.Label13)
+        Me.GroupBox3.Controls.Add(Me.Label14)
+        Me.GroupBox3.Location = New System.Drawing.Point(228, 178)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(243, 149)
+        Me.GroupBox3.TabIndex = 90
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Additional Information:"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(6, 17)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(108, 13)
+        Me.Label8.TabIndex = 18
+        Me.Label8.Text = "Undergrad Institution:"
+        '
+        'UndergradInstitutionTextBox
+        '
+        Me.UndergradInstitutionTextBox.Location = New System.Drawing.Point(120, 14)
+        Me.UndergradInstitutionTextBox.Name = "UndergradInstitutionTextBox"
+        Me.UndergradInstitutionTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.UndergradInstitutionTextBox.TabIndex = 6
+        '
+        'CampusTextBox
+        '
+        Me.CampusTextBox.Location = New System.Drawing.Point(119, 37)
+        Me.CampusTextBox.Name = "CampusTextBox"
+        Me.CampusTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.CampusTextBox.TabIndex = 7
+        '
+        'UGPATextBox
+        '
+        Me.UGPATextBox.Location = New System.Drawing.Point(120, 63)
+        Me.UGPATextBox.Name = "UGPATextBox"
+        Me.UGPATextBox.Size = New System.Drawing.Size(100, 20)
+        Me.UGPATextBox.TabIndex = 8
+        '
+        'WorkTextBox
+        '
+        Me.WorkTextBox.Location = New System.Drawing.Point(120, 89)
+        Me.WorkTextBox.Name = "WorkTextBox"
+        Me.WorkTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.WorkTextBox.TabIndex = 9
+        '
+        'UndergradMajorTextBox
+        '
+        Me.UndergradMajorTextBox.Location = New System.Drawing.Point(119, 115)
+        Me.UndergradMajorTextBox.Name = "UndergradMajorTextBox"
+        Me.UndergradMajorTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.UndergradMajorTextBox.TabIndex = 10
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(22, 40)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(92, 13)
+        Me.Label10.TabIndex = 20
+        Me.Label10.Text = "Campus/Program:"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(74, 66)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(40, 13)
+        Me.Label12.TabIndex = 22
+        Me.Label12.Text = "UGPA:"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(24, 118)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(89, 13)
+        Me.Label13.TabIndex = 23
+        Me.Label13.Text = "Undergrad Major:"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(57, 92)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(57, 13)
+        Me.Label14.TabIndex = 24
+        Me.Label14.Text = "Work Exp:"
+        '
+        'AddStudentButton
+        '
+        Me.AddStudentButton.Location = New System.Drawing.Point(21, 298)
+        Me.AddStudentButton.Name = "AddStudentButton"
+        Me.AddStudentButton.Size = New System.Drawing.Size(149, 29)
+        Me.AddStudentButton.TabIndex = 89
+        Me.AddStudentButton.Text = "Edit Student"
+        Me.AddStudentButton.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.AvgGMATTextBox1)
+        Me.GroupBox2.Controls.Add(Me.Label15)
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.verbalTextBox)
+        Me.GroupBox2.Controls.Add(Me.QuantTextBox)
+        Me.GroupBox2.Controls.Add(Me.TotalTextBox)
+        Me.GroupBox2.Location = New System.Drawing.Point(335, 7)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(222, 131)
+        Me.GroupBox2.TabIndex = 88
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "GMAT Scores:"
+        '
+        'AvgGMATTextBox1
+        '
+        Me.AvgGMATTextBox1.Location = New System.Drawing.Point(99, 94)
+        Me.AvgGMATTextBox1.Name = "AvgGMATTextBox1"
+        Me.AvgGMATTextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.AvgGMATTextBox1.TabIndex = 39
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(8, 95)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(84, 13)
+        Me.Label15.TabIndex = 38
+        Me.Label15.Text = "Average GMAT:"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(8, 71)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(34, 13)
+        Me.Label7.TabIndex = 8
+        Me.Label7.Text = "Total:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(8, 45)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Quant:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(7, 22)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(40, 13)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Verbal:"
+        '
+        'verbalTextBox
+        '
+        Me.verbalTextBox.Location = New System.Drawing.Point(99, 19)
+        Me.verbalTextBox.Name = "verbalTextBox"
+        Me.verbalTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.verbalTextBox.TabIndex = 3
+        '
+        'QuantTextBox
+        '
+        Me.QuantTextBox.Location = New System.Drawing.Point(99, 42)
+        Me.QuantTextBox.Name = "QuantTextBox"
+        Me.QuantTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.QuantTextBox.TabIndex = 4
+        '
+        'TotalTextBox
+        '
+        Me.TotalTextBox.Location = New System.Drawing.Point(99, 67)
+        Me.TotalTextBox.Name = "TotalTextBox"
+        Me.TotalTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.TotalTextBox.TabIndex = 5
+        '
+        'CheckBox9
+        '
+        Me.CheckBox9.AutoSize = True
+        Me.CheckBox9.Location = New System.Drawing.Point(710, 107)
+        Me.CheckBox9.Name = "CheckBox9"
+        Me.CheckBox9.Size = New System.Drawing.Size(52, 17)
+        Me.CheckBox9.TabIndex = 87
+        Me.CheckBox9.Text = "AWD"
+        Me.CheckBox9.UseVisualStyleBackColor = True
+        '
+        'CheckBox8
+        '
+        Me.CheckBox8.AutoSize = True
+        Me.CheckBox8.Location = New System.Drawing.Point(649, 107)
+        Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.Size = New System.Drawing.Size(46, 17)
+        Me.CheckBox8.TabIndex = 86
+        Me.CheckBox8.Text = "Req"
+        Me.CheckBox8.UseVisualStyleBackColor = True
+        '
+        'EnrollCheckBox
+        '
+        Me.EnrollCheckBox.AutoSize = True
+        Me.EnrollCheckBox.Location = New System.Drawing.Point(690, 20)
+        Me.EnrollCheckBox.Name = "EnrollCheckBox"
+        Me.EnrollCheckBox.Size = New System.Drawing.Size(52, 17)
+        Me.EnrollCheckBox.TabIndex = 85
+        Me.EnrollCheckBox.Text = "Enroll"
+        Me.EnrollCheckBox.UseVisualStyleBackColor = True
+        '
+        'AcceptCheckBox
+        '
+        Me.AcceptCheckBox.AutoSize = True
+        Me.AcceptCheckBox.Location = New System.Drawing.Point(649, 80)
+        Me.AcceptCheckBox.Name = "AcceptCheckBox"
+        Me.AcceptCheckBox.Size = New System.Drawing.Size(60, 17)
+        Me.AcceptCheckBox.TabIndex = 84
+        Me.AcceptCheckBox.Text = "Accept"
+        Me.AcceptCheckBox.UseVisualStyleBackColor = True
+        '
+        'DenyCheckBox
+        '
+        Me.DenyCheckBox.AutoSize = True
+        Me.DenyCheckBox.Location = New System.Drawing.Point(710, 81)
+        Me.DenyCheckBox.Name = "DenyCheckBox"
+        Me.DenyCheckBox.Size = New System.Drawing.Size(51, 17)
+        Me.DenyCheckBox.TabIndex = 83
+        Me.DenyCheckBox.Text = "Deny"
+        Me.DenyCheckBox.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.GSODefCheckBox)
+        Me.GroupBox1.Controls.Add(Me.GSOAcceptCheckBox)
+        Me.GroupBox1.Controls.Add(Me.GSODenyCheckBox)
+        Me.GroupBox1.Location = New System.Drawing.Point(228, 15)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(90, 125)
+        Me.GroupBox1.TabIndex = 82
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "GSO:"
+        '
+        'GSODefCheckBox
+        '
+        Me.GSODefCheckBox.AutoSize = True
+        Me.GSODefCheckBox.Location = New System.Drawing.Point(9, 65)
+        Me.GSODefCheckBox.Name = "GSODefCheckBox"
+        Me.GSODefCheckBox.Size = New System.Drawing.Size(43, 17)
+        Me.GSODefCheckBox.TabIndex = 30
+        Me.GSODefCheckBox.Text = "Def"
+        Me.GSODefCheckBox.UseVisualStyleBackColor = True
+        '
+        'GSOAcceptCheckBox
+        '
+        Me.GSOAcceptCheckBox.AutoSize = True
+        Me.GSOAcceptCheckBox.Location = New System.Drawing.Point(9, 19)
+        Me.GSOAcceptCheckBox.Name = "GSOAcceptCheckBox"
+        Me.GSOAcceptCheckBox.Size = New System.Drawing.Size(60, 17)
+        Me.GSOAcceptCheckBox.TabIndex = 28
+        Me.GSOAcceptCheckBox.Text = "Accept"
+        Me.GSOAcceptCheckBox.UseVisualStyleBackColor = True
+        '
+        'GSODenyCheckBox
+        '
+        Me.GSODenyCheckBox.AutoSize = True
+        Me.GSODenyCheckBox.Location = New System.Drawing.Point(9, 42)
+        Me.GSODenyCheckBox.Name = "GSODenyCheckBox"
+        Me.GSODenyCheckBox.Size = New System.Drawing.Size(51, 17)
+        Me.GSODenyCheckBox.TabIndex = 29
+        Me.GSODenyCheckBox.Text = "Deny"
+        Me.GSODenyCheckBox.UseVisualStyleBackColor = True
+        '
+        'HoldCheckBox
+        '
+        Me.HoldCheckBox.AutoSize = True
+        Me.HoldCheckBox.Location = New System.Drawing.Point(599, 20)
+        Me.HoldCheckBox.Name = "HoldCheckBox"
+        Me.HoldCheckBox.Size = New System.Drawing.Size(48, 17)
+        Me.HoldCheckBox.TabIndex = 81
+        Me.HoldCheckBox.Text = "Hold"
+        Me.HoldCheckBox.UseVisualStyleBackColor = True
+        '
+        'SexComboBox
+        '
+        Me.SexComboBox.FormattingEnabled = True
+        Me.SexComboBox.Location = New System.Drawing.Point(643, -97)
+        Me.SexComboBox.Name = "SexComboBox"
+        Me.SexComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.SexComboBox.TabIndex = 80
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(596, 52)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(59, 13)
+        Me.Label11.TabIndex = 79
+        Me.Label11.Text = "Grad Date:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(596, 108)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(37, 13)
+        Me.Label9.TabIndex = 78
+        Me.Label9.Text = "Assist:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(596, 81)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(47, 13)
+        Me.Label5.TabIndex = 77
+        Me.Label5.Text = "Student:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(609, -97)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(28, 13)
+        Me.Label2.TabIndex = 76
+        Me.Label2.Text = "Sex:"
+        '
+        'GradDateTextBox
+        '
+        Me.GradDateTextBox.Location = New System.Drawing.Point(661, 49)
+        Me.GradDateTextBox.Name = "GradDateTextBox"
+        Me.GradDateTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.GradDateTextBox.TabIndex = 75
+        '
+        'nameLabel
+        '
+        Me.nameLabel.AutoSize = True
+        Me.nameLabel.Location = New System.Drawing.Point(14, 60)
+        Me.nameLabel.Name = "nameLabel"
+        Me.nameLabel.Size = New System.Drawing.Size(69, 13)
+        Me.nameLabel.TabIndex = 74
+        Me.nameLabel.Text = "Middle Name"
+        '
+        'middlenameTextBox
+        '
+        Me.middlenameTextBox.Location = New System.Drawing.Point(84, 57)
+        Me.middlenameTextBox.Name = "middlenameTextBox"
+        Me.middlenameTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.middlenameTextBox.TabIndex = 73
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.TestLabel)
+        Me.TabPage2.Controls.Add(Me.Label27)
+        Me.TabPage2.Controls.Add(Me.AdvisingDataGridView)
+        Me.TabPage2.Controls.Add(Me.TextBox2)
+        Me.TabPage2.Controls.Add(Me.Label28)
+        Me.TabPage2.Controls.Add(Me.Button1)
+        Me.TabPage2.Controls.Add(Me.TextBox3)
+        Me.TabPage2.Controls.Add(Me.Label29)
+        Me.TabPage2.Controls.Add(Me.AdvisingCalendar)
+        Me.TabPage2.Controls.Add(Me.advisingLabel)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(876, 616)
+        Me.TabPage2.TabIndex = 5
+        Me.TabPage2.Text = "Advising"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'TestLabel
+        '
+        Me.TestLabel.AutoSize = True
+        Me.TestLabel.Location = New System.Drawing.Point(382, 222)
+        Me.TestLabel.Name = "TestLabel"
+        Me.TestLabel.Size = New System.Drawing.Size(28, 13)
+        Me.TestLabel.TabIndex = 21
+        Me.TestLabel.Text = "Test"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(19, 297)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(101, 25)
+        Me.Label27.TabIndex = 20
+        Me.Label27.Text = "Advisors:"
+        '
+        'AdvisingDataGridView
+        '
+        Me.AdvisingDataGridView.AllowUserToAddRows = False
+        Me.AdvisingDataGridView.AllowUserToDeleteRows = False
+        Me.AdvisingDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.AdvisingDataGridView.Location = New System.Drawing.Point(6, 325)
+        Me.AdvisingDataGridView.Name = "AdvisingDataGridView"
+        Me.AdvisingDataGridView.ReadOnly = True
+        Me.AdvisingDataGridView.Size = New System.Drawing.Size(852, 268)
+        Me.AdvisingDataGridView.TabIndex = 19
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(532, 200)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 18
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(493, 198)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(33, 13)
+        Me.Label28.TabIndex = 17
+        Me.Label28.Text = "Time:"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(532, 226)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 16
+        Me.Button1.Text = "Schedule"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(532, 174)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 15
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(493, 174)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(33, 13)
+        Me.Label29.TabIndex = 14
+        Me.Label29.Text = "Date:"
+        '
+        'AdvisingCalendar
+        '
+        Me.AdvisingCalendar.Location = New System.Drawing.Point(30, 58)
+        Me.AdvisingCalendar.Name = "AdvisingCalendar"
+        Me.AdvisingCalendar.TabIndex = 13
+        '
+        'advisingLabel
+        '
+        Me.advisingLabel.AutoSize = True
+        Me.advisingLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.advisingLabel.Location = New System.Drawing.Point(19, 24)
+        Me.advisingLabel.Name = "advisingLabel"
+        Me.advisingLabel.Size = New System.Drawing.Size(396, 25)
+        Me.advisingLabel.TabIndex = 12
+        Me.advisingLabel.Text = "Pick a Date to See Available Instructors:"
         '
         'StudentInfo
         '
+        Me.AcceptButton = Me.submit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(858, 533)
+        Me.ClientSize = New System.Drawing.Size(898, 662)
         Me.Controls.Add(Me.tabApplication)
         Me.Name = "StudentInfo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -2114,6 +3057,20 @@ Partial Class StudentInfo
         Me.StudentInfoPanel.ResumeLayout(False)
         Me.StudentInfoPanel.PerformLayout()
         Me.tabApplication.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        CType(Me.SumReportDGV, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        CType(Me.AdvisingDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2259,7 +3216,6 @@ Partial Class StudentInfo
     Friend WithEvents lblFirstName As Label
     Friend WithEvents txtBirthday1 As MaskedTextBox
     Friend WithEvents lblMiddleName As Label
-    Friend WithEvents lblBirthdayFormat As Label
     Friend WithEvents Label55 As Label
     Friend WithEvents txtLastName As TextBox
     Friend WithEvents Label56 As Label
@@ -2295,7 +3251,6 @@ Partial Class StudentInfo
     Friend WithEvents Label38 As Label
     Friend WithEvents Label39 As Label
     Friend WithEvents Label40 As Label
-    Friend WithEvents chkResident As CheckBox
     Friend WithEvents Label41 As Label
     Friend WithEvents Label42 As Label
     Friend WithEvents Label43 As Label
@@ -2308,4 +3263,92 @@ Partial Class StudentInfo
     Friend WithEvents Lo As Label
     Friend WithEvents tabApplication As TabControl
     Friend WithEvents submit As Button
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents SearchLabel As Label
+    Friend WithEvents SearchTextbox As TextBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents StudentIDTextbox As TextBox
+    Friend WithEvents StudentIDTxtBox As TextBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents BirthDateTextBox As TextBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents EmailTextBox As TextBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents ZipCodeTextBox As TextBox
+    Friend WithEvents StateTextBox As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents CityTextBox As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents AddressTextBox As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents SSNTextBox As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents LastnameTextBox As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents FirstnameTExtBox As TextBox
+    Friend WithEvents SumReportDGV As DataGridView
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents RadioButton7 As RadioButton
+    Friend WithEvents RadioButton6 As RadioButton
+    Friend WithEvents RadioButton5 As RadioButton
+    Friend WithEvents RadioButton4 As RadioButton
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents UndergradInstitutionTextBox As TextBox
+    Friend WithEvents CampusTextBox As TextBox
+    Friend WithEvents UGPATextBox As TextBox
+    Friend WithEvents WorkTextBox As TextBox
+    Friend WithEvents UndergradMajorTextBox As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents AddStudentButton As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents AvgGMATTextBox1 As TextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents verbalTextBox As TextBox
+    Friend WithEvents QuantTextBox As TextBox
+    Friend WithEvents TotalTextBox As TextBox
+    Friend WithEvents CheckBox9 As CheckBox
+    Friend WithEvents CheckBox8 As CheckBox
+    Friend WithEvents EnrollCheckBox As CheckBox
+    Friend WithEvents AcceptCheckBox As CheckBox
+    Friend WithEvents DenyCheckBox As CheckBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GSODefCheckBox As CheckBox
+    Friend WithEvents GSOAcceptCheckBox As CheckBox
+    Friend WithEvents GSODenyCheckBox As CheckBox
+    Friend WithEvents HoldCheckBox As CheckBox
+    Friend WithEvents SexComboBox As ComboBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents GradDateTextBox As TextBox
+    Friend WithEvents nameLabel As Label
+    Friend WithEvents middlenameTextBox As TextBox
+    Friend WithEvents SecondEmailtxtbox As TextBox
+    Friend WithEvents Label26 As Label
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents lblBirthdayFormat As Label
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents TestLabel As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents AdvisingDataGridView As DataGridView
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents AdvisingCalendar As MonthCalendar
+    Friend WithEvents advisingLabel As Label
 End Class
