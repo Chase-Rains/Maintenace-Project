@@ -22,6 +22,7 @@ Partial Class StudentInfo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.tabStudentStatus = New System.Windows.Forms.TabPage()
         Me.Label106 = New System.Windows.Forms.Label()
         Me.Label107 = New System.Windows.Forms.Label()
@@ -288,16 +289,26 @@ Partial Class StudentInfo
         Me.nameLabel = New System.Windows.Forms.Label()
         Me.middlenameTextBox = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TestLabel = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.update = New System.Windows.Forms.Button()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label30 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.AdvisingDataGridView = New System.Windows.Forms.DataGridView()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.AdvisingCalendar = New System.Windows.Forms.MonthCalendar()
         Me.advisingLabel = New System.Windows.Forms.Label()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.tabStudentStatus.SuspendLayout()
         Me.tabCredentials.SuspendLayout()
         Me.TabAdmission.SuspendLayout()
@@ -312,6 +323,8 @@ Partial Class StudentInfo
         Me.GroupBox1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.AdvisingDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tabStudentStatus
@@ -353,7 +366,7 @@ Partial Class StudentInfo
         Me.tabStudentStatus.Location = New System.Drawing.Point(4, 22)
         Me.tabStudentStatus.Name = "tabStudentStatus"
         Me.tabStudentStatus.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabStudentStatus.Size = New System.Drawing.Size(876, 616)
+        Me.tabStudentStatus.Size = New System.Drawing.Size(890, 636)
         Me.tabStudentStatus.TabIndex = 3
         Me.tabStudentStatus.Text = "Student Status"
         Me.tabStudentStatus.UseVisualStyleBackColor = True
@@ -745,7 +758,7 @@ Partial Class StudentInfo
         Me.tabCredentials.Location = New System.Drawing.Point(4, 22)
         Me.tabCredentials.Name = "tabCredentials"
         Me.tabCredentials.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabCredentials.Size = New System.Drawing.Size(876, 616)
+        Me.tabCredentials.Size = New System.Drawing.Size(890, 636)
         Me.tabCredentials.TabIndex = 2
         Me.tabCredentials.Text = "Credentials & Documents"
         Me.tabCredentials.UseVisualStyleBackColor = True
@@ -1412,7 +1425,7 @@ Partial Class StudentInfo
         Me.TabAdmission.Location = New System.Drawing.Point(4, 22)
         Me.TabAdmission.Name = "TabAdmission"
         Me.TabAdmission.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabAdmission.Size = New System.Drawing.Size(876, 616)
+        Me.TabAdmission.Size = New System.Drawing.Size(890, 636)
         Me.TabAdmission.TabIndex = 1
         Me.TabAdmission.Text = "Admission Request"
         Me.TabAdmission.UseVisualStyleBackColor = True
@@ -1611,7 +1624,7 @@ Partial Class StudentInfo
         Me.tabPersonalInfo.Location = New System.Drawing.Point(4, 22)
         Me.tabPersonalInfo.Name = "tabPersonalInfo"
         Me.tabPersonalInfo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabPersonalInfo.Size = New System.Drawing.Size(876, 616)
+        Me.tabPersonalInfo.Size = New System.Drawing.Size(890, 636)
         Me.tabPersonalInfo.TabIndex = 0
         Me.tabPersonalInfo.Text = "Add Student"
         Me.tabPersonalInfo.UseVisualStyleBackColor = True
@@ -2214,10 +2227,11 @@ Partial Class StudentInfo
         Me.tabApplication.Controls.Add(Me.TabAdmission)
         Me.tabApplication.Controls.Add(Me.tabCredentials)
         Me.tabApplication.Controls.Add(Me.tabStudentStatus)
-        Me.tabApplication.Location = New System.Drawing.Point(12, 3)
+        Me.tabApplication.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tabApplication.Location = New System.Drawing.Point(0, 0)
         Me.tabApplication.Name = "tabApplication"
         Me.tabApplication.SelectedIndex = 0
-        Me.tabApplication.Size = New System.Drawing.Size(884, 642)
+        Me.tabApplication.Size = New System.Drawing.Size(898, 662)
         Me.tabApplication.TabIndex = 51
         '
         'TabPage1
@@ -2269,7 +2283,7 @@ Partial Class StudentInfo
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(876, 616)
+        Me.TabPage1.Size = New System.Drawing.Size(890, 636)
         Me.TabPage1.TabIndex = 4
         Me.TabPage1.Text = "Update Student"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -2471,6 +2485,9 @@ Partial Class StudentInfo
         '
         Me.SumReportDGV.AllowUserToAddRows = False
         Me.SumReportDGV.AllowUserToDeleteRows = False
+        Me.SumReportDGV.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SumReportDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SumReportDGV.Location = New System.Drawing.Point(12, 371)
         Me.SumReportDGV.Name = "SumReportDGV"
@@ -2931,12 +2948,19 @@ Partial Class StudentInfo
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.TestLabel)
+        Me.TabPage2.Controls.Add(Me.Label32)
+        Me.TabPage2.Controls.Add(Me.DataGridView1)
+        Me.TabPage2.Controls.Add(Me.TextBox5)
+        Me.TabPage2.Controls.Add(Me.TextBox4)
+        Me.TabPage2.Controls.Add(Me.Label31)
+        Me.TabPage2.Controls.Add(Me.TextBox2)
+        Me.TabPage2.Controls.Add(Me.update)
+        Me.TabPage2.Controls.Add(Me.ComboBox2)
+        Me.TabPage2.Controls.Add(Me.ComboBox1)
+        Me.TabPage2.Controls.Add(Me.Label30)
         Me.TabPage2.Controls.Add(Me.Label27)
         Me.TabPage2.Controls.Add(Me.AdvisingDataGridView)
-        Me.TabPage2.Controls.Add(Me.TextBox2)
         Me.TabPage2.Controls.Add(Me.Label28)
-        Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Controls.Add(Me.TextBox3)
         Me.TabPage2.Controls.Add(Me.Label29)
         Me.TabPage2.Controls.Add(Me.AdvisingCalendar)
@@ -2944,69 +2968,118 @@ Partial Class StudentInfo
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(876, 616)
+        Me.TabPage2.Size = New System.Drawing.Size(890, 636)
         Me.TabPage2.TabIndex = 5
         Me.TabPage2.Text = "Advising"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'TestLabel
+        'TextBox5
         '
-        Me.TestLabel.AutoSize = True
-        Me.TestLabel.Location = New System.Drawing.Point(382, 222)
-        Me.TestLabel.Name = "TestLabel"
-        Me.TestLabel.Size = New System.Drawing.Size(28, 13)
-        Me.TestLabel.TabIndex = 21
-        Me.TestLabel.Text = "Test"
+        Me.TextBox5.Location = New System.Drawing.Point(674, 131)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.TabIndex = 119
+        Me.TextBox5.Visible = False
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Enabled = False
+        Me.TextBox4.Location = New System.Drawing.Point(568, 104)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 118
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(516, 105)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(47, 13)
+        Me.Label31.TabIndex = 117
+        Me.Label31.Text = "Student:"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(118, 256)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(114, 20)
+        Me.TextBox2.TabIndex = 116
+        '
+        'update
+        '
+        Me.update.BackColor = System.Drawing.Color.DarkRed
+        Me.update.Font = New System.Drawing.Font("Times New Roman", 25.0!)
+        Me.update.ForeColor = System.Drawing.Color.Snow
+        Me.update.Location = New System.Drawing.Point(519, 193)
+        Me.update.Name = "update"
+        Me.update.Size = New System.Drawing.Size(188, 56)
+        Me.update.TabIndex = 29
+        Me.update.Text = "Schedule"
+        Me.update.UseVisualStyleBackColor = False
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"", "Steve Nolan", "Rhonda Syler"})
+        Me.ComboBox2.Location = New System.Drawing.Point(568, 130)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBox2.TabIndex = 24
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"11:00 ", "11:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00"})
+        Me.ComboBox1.Location = New System.Drawing.Point(568, 77)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(100, 21)
+        Me.ComboBox1.TabIndex = 23
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(516, 130)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(45, 13)
+        Me.Label30.TabIndex = 21
+        Me.Label30.Text = "Advisor:"
         '
         'Label27
         '
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(19, 297)
+        Me.Label27.Location = New System.Drawing.Point(9, 251)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(101, 25)
+        Me.Label27.Size = New System.Drawing.Size(103, 25)
         Me.Label27.TabIndex = 20
-        Me.Label27.Text = "Advisors:"
+        Me.Label27.Text = "Students:"
         '
         'AdvisingDataGridView
         '
         Me.AdvisingDataGridView.AllowUserToAddRows = False
         Me.AdvisingDataGridView.AllowUserToDeleteRows = False
         Me.AdvisingDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.AdvisingDataGridView.Location = New System.Drawing.Point(6, 325)
+        Me.AdvisingDataGridView.Location = New System.Drawing.Point(6, 282)
         Me.AdvisingDataGridView.Name = "AdvisingDataGridView"
         Me.AdvisingDataGridView.ReadOnly = True
-        Me.AdvisingDataGridView.Size = New System.Drawing.Size(852, 268)
+        Me.AdvisingDataGridView.Size = New System.Drawing.Size(615, 159)
         Me.AdvisingDataGridView.TabIndex = 19
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(532, 200)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 18
         '
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(493, 198)
+        Me.Label28.Location = New System.Drawing.Point(516, 80)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(33, 13)
         Me.Label28.TabIndex = 17
         Me.Label28.Text = "Time:"
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(532, 226)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 16
-        Me.Button1.Text = "Schedule"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(532, 174)
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.Location = New System.Drawing.Point(568, 52)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(100, 20)
         Me.TextBox3.TabIndex = 15
@@ -3014,7 +3087,7 @@ Partial Class StudentInfo
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(493, 174)
+        Me.Label29.Location = New System.Drawing.Point(516, 53)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(33, 13)
         Me.Label29.TabIndex = 14
@@ -3022,6 +3095,8 @@ Partial Class StudentInfo
         '
         'AdvisingCalendar
         '
+        Me.AdvisingCalendar.CalendarDimensions = New System.Drawing.Size(2, 1)
+        Me.AdvisingCalendar.FirstDayOfWeek = System.Windows.Forms.Day.Monday
         Me.AdvisingCalendar.Location = New System.Drawing.Point(30, 58)
         Me.AdvisingCalendar.Name = "AdvisingCalendar"
         Me.AdvisingCalendar.TabIndex = 13
@@ -3032,9 +3107,32 @@ Partial Class StudentInfo
         Me.advisingLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.advisingLabel.Location = New System.Drawing.Point(19, 24)
         Me.advisingLabel.Name = "advisingLabel"
-        Me.advisingLabel.Size = New System.Drawing.Size(396, 25)
+        Me.advisingLabel.Size = New System.Drawing.Size(719, 25)
         Me.advisingLabel.TabIndex = 12
-        Me.advisingLabel.Text = "Pick a Date to See Available Instructors:"
+        Me.advisingLabel.Text = "Please pick a date, student, time and advisor to schedule an appointment."
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(8, 478)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(615, 131)
+        Me.DataGridView1.TabIndex = 120
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(8, 449)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(257, 25)
+        Me.Label32.TabIndex = 121
+        Me.Label32.Text = "Scheduled Appointments:"
         '
         'StudentInfo
         '
@@ -3043,6 +3141,7 @@ Partial Class StudentInfo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(898, 662)
         Me.Controls.Add(Me.tabApplication)
+        Me.MinimizeBox = False
         Me.Name = "StudentInfo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "StudentInfo"
@@ -3071,6 +3170,8 @@ Partial Class StudentInfo
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.AdvisingDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3341,14 +3442,24 @@ Partial Class StudentInfo
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents lblBirthdayFormat As Label
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents TestLabel As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents AdvisingDataGridView As DataGridView
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label28 As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label29 As Label
     Friend WithEvents AdvisingCalendar As MonthCalendar
     Friend WithEvents advisingLabel As Label
+    Friend WithEvents BindingSource1 As BindingSource
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Label30 As Label
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label31 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents update As Button
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label32 As Label
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

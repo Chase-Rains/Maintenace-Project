@@ -6,3 +6,10 @@ CREATE TABLE Credentials (
 
 INSERT INTO credentials (username,password)
 VALUES ('Chase','1');
+
+select scheduling.AppointmentID, CONCAT( advisors.firstname, ' ', advisors.lastname) as Advisor, [date], [time], CONCAT(students.firstname, ' ', students.lastname) as Student
+   from scheduling 
+   right join advisors on scheduling.advisorid = [advisors].advisorid 
+   right join students on scheduling.studentid = students.studentid
+   where  scheduling.AppointmentID is not null
+   order by appointmentid
