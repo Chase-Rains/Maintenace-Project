@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class StudentInfo
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class helper
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,9 @@ Partial Class StudentInfo
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
+        Me.tabApplication = New System.Windows.Forms.TabControl()
         Me.tabPersonalInfo = New System.Windows.Forms.TabPage()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.submit = New System.Windows.Forms.Button()
@@ -92,7 +92,6 @@ Partial Class StudentInfo
         Me.Label52 = New System.Windows.Forms.Label()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.Lo = New System.Windows.Forms.Label()
-        Me.tabApplication = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.DateAcceptedComboBox2 = New System.Windows.Forms.TextBox()
@@ -168,13 +167,9 @@ Partial Class StudentInfo
         Me.Label29 = New System.Windows.Forms.Label()
         Me.AdvisingCalendar = New System.Windows.Forms.MonthCalendar()
         Me.advisingLabel = New System.Windows.Forms.Label()
-        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.BackgroundWorker2 = New System.ComponentModel.BackgroundWorker()
-        Me.Logoutbutton1 = New System.Windows.Forms.Button()
+        Me.tabApplication.SuspendLayout()
         Me.tabPersonalInfo.SuspendLayout()
         Me.StudentInfoPanel.SuspendLayout()
-        Me.tabApplication.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.SumReportDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -182,8 +177,20 @@ Partial Class StudentInfo
         Me.TabPage2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AdvisingDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'tabApplication
+        '
+        Me.tabApplication.Controls.Add(Me.tabPersonalInfo)
+        Me.tabApplication.Controls.Add(Me.TabPage1)
+        Me.tabApplication.Controls.Add(Me.TabPage2)
+        Me.tabApplication.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tabApplication.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.tabApplication.Location = New System.Drawing.Point(0, 0)
+        Me.tabApplication.Name = "tabApplication"
+        Me.tabApplication.SelectedIndex = 0
+        Me.tabApplication.Size = New System.Drawing.Size(800, 450)
+        Me.tabApplication.TabIndex = 52
         '
         'tabPersonalInfo
         '
@@ -222,7 +229,7 @@ Partial Class StudentInfo
         Me.tabPersonalInfo.Location = New System.Drawing.Point(4, 22)
         Me.tabPersonalInfo.Name = "tabPersonalInfo"
         Me.tabPersonalInfo.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabPersonalInfo.Size = New System.Drawing.Size(910, 655)
+        Me.tabPersonalInfo.Size = New System.Drawing.Size(792, 424)
         Me.tabPersonalInfo.TabIndex = 0
         Me.tabPersonalInfo.Text = "Add Student"
         Me.tabPersonalInfo.UseVisualStyleBackColor = True
@@ -890,19 +897,6 @@ Partial Class StudentInfo
         Me.Lo.Size = New System.Drawing.Size(77, 13)
         Me.Lo.TabIndex = 212
         Me.Lo.Text = "Local Address:"
-        '
-        'tabApplication
-        '
-        Me.tabApplication.Controls.Add(Me.tabPersonalInfo)
-        Me.tabApplication.Controls.Add(Me.TabPage1)
-        Me.tabApplication.Controls.Add(Me.TabPage2)
-        Me.tabApplication.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tabApplication.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.tabApplication.Location = New System.Drawing.Point(0, 0)
-        Me.tabApplication.Name = "tabApplication"
-        Me.tabApplication.SelectedIndex = 0
-        Me.tabApplication.Size = New System.Drawing.Size(918, 681)
-        Me.tabApplication.TabIndex = 51
         '
         'TabPage1
         '
@@ -1624,36 +1618,19 @@ Partial Class StudentInfo
         Me.advisingLabel.TabIndex = 12
         Me.advisingLabel.Text = "Please pick a date, student, time and advisor to schedule an appointment."
         '
-        'Logoutbutton1
+        'helper
         '
-        Me.Logoutbutton1.BackColor = System.Drawing.Color.Maroon
-        Me.Logoutbutton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
-        Me.Logoutbutton1.ForeColor = System.Drawing.Color.White
-        Me.Logoutbutton1.Location = New System.Drawing.Point(209, 0)
-        Me.Logoutbutton1.Name = "Logoutbutton1"
-        Me.Logoutbutton1.Size = New System.Drawing.Size(57, 22)
-        Me.Logoutbutton1.TabIndex = 329
-        Me.Logoutbutton1.Text = "Logout"
-        Me.Logoutbutton1.UseVisualStyleBackColor = False
-        '
-        'StudentInfo
-        '
-        Me.AcceptButton = Me.submit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(918, 681)
-        Me.Controls.Add(Me.Logoutbutton1)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.tabApplication)
-        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
-        Me.MinimizeBox = False
-        Me.Name = "StudentInfo"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "StudentInfo"
+        Me.Name = "helper"
+        Me.Text = "helper"
+        Me.tabApplication.ResumeLayout(False)
         Me.tabPersonalInfo.ResumeLayout(False)
         Me.tabPersonalInfo.PerformLayout()
         Me.StudentInfoPanel.ResumeLayout(False)
         Me.StudentInfoPanel.PerformLayout()
-        Me.tabApplication.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         CType(Me.SumReportDGV, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1665,12 +1642,25 @@ Partial Class StudentInfo
         Me.TabPage2.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AdvisingDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents tabApplication As TabControl
     Friend WithEvents tabPersonalInfo As TabPage
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents submit As Button
     Friend WithEvents StudentInfoPanel As Panel
+    Friend WithEvents Label48 As Label
+    Friend WithEvents DateAcceptedMaskedTextBox As MaskedTextBox
+    Friend WithEvents Label47 As Label
+    Friend WithEvents Label46 As Label
+    Friend WithEvents DegreeSeekingcombobox As ComboBox
+    Friend WithEvents Label33 As Label
+    Friend WithEvents UndergraduateDegreecombobox As ComboBox
+    Friend WithEvents lblBirthdayFormat As Label
+    Friend WithEvents SecondEmailtxtbox As TextBox
+    Friend WithEvents Label26 As Label
     Friend WithEvents EthnicDropDown As ComboBox
     Friend WithEvents txtFirstName As TextBox
     Friend WithEvents CitizenshipDropDown As ComboBox
@@ -1679,7 +1669,11 @@ Partial Class StudentInfo
     Friend WithEvents GenderDropDown As ComboBox
     Friend WithEvents txtSSN As MaskedTextBox
     Friend WithEvents lblFirstName As Label
+    Friend WithEvents txtPPhone As MaskedTextBox
+    Friend WithEvents txtWorkPhone As MaskedTextBox
+    Friend WithEvents txtCurrentPhone As MaskedTextBox
     Friend WithEvents txtBirthday1 As MaskedTextBox
+    Friend WithEvents txtEmail As TextBox
     Friend WithEvents lblMiddleName As Label
     Friend WithEvents Label55 As Label
     Friend WithEvents txtLastName As TextBox
@@ -1687,29 +1681,25 @@ Partial Class StudentInfo
     Friend WithEvents txtMiddleName As TextBox
     Friend WithEvents Label57 As Label
     Friend WithEvents lblSSN As Label
+    Friend WithEvents Label72 As Label
     Friend WithEvents Label58 As Label
     Friend WithEvents lblDOB As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label34 As Label
     Friend WithEvents PState As ComboBox
     Friend WithEvents Mstate As ComboBox
     Friend WithEvents cbxPState As ComboBox
     Friend WithEvents txtPZipCode As MaskedTextBox
     Friend WithEvents MZip As MaskedTextBox
     Friend WithEvents PZip As MaskedTextBox
-    Friend WithEvents txtPPhone As MaskedTextBox
-    Friend WithEvents txtWorkPhone As MaskedTextBox
-    Friend WithEvents txtCurrentPhone As MaskedTextBox
-    Friend WithEvents txtEmail As TextBox
     Friend WithEvents Mcity As TextBox
     Friend WithEvents Maddress As TextBox
     Friend WithEvents Pcity As TextBox
     Friend WithEvents Paddress As TextBox
     Friend WithEvents txtPCity As TextBox
     Friend WithEvents txtPAddress As TextBox
-    Friend WithEvents Label72 As Label
     Friend WithEvents Label66 As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label34 As Label
-    Friend WithEvents Label35 As Label
     Friend WithEvents Label65 As Label
     Friend WithEvents Label36 As Label
     Friend WithEvents Label37 As Label
@@ -1726,9 +1716,13 @@ Partial Class StudentInfo
     Friend WithEvents Label52 As Label
     Friend WithEvents Label53 As Label
     Friend WithEvents Lo As Label
-    Friend WithEvents tabApplication As TabControl
-    Friend WithEvents submit As Button
     Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents Label11 As Label
+    Friend WithEvents DateAcceptedComboBox2 As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents ApplicationStatusComboBox As ComboBox
+    Friend WithEvents Delete As Button
     Friend WithEvents SearchLabel As Label
     Friend WithEvents SearchTextbox As TextBox
     Friend WithEvents Label25 As Label
@@ -1755,6 +1749,8 @@ Partial Class StudentInfo
     Friend WithEvents FirstnameTExtBox As TextBox
     Friend WithEvents SumReportDGV As DataGridView
     Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents DegreeTextBox As TextBox
+    Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents UndergradInstitutionTextBox As TextBox
     Friend WithEvents UGPATextBox As TextBox
@@ -1777,11 +1773,17 @@ Partial Class StudentInfo
     Friend WithEvents Label2 As Label
     Friend WithEvents nameLabel As Label
     Friend WithEvents middlenameTextBox As TextBox
-    Friend WithEvents SecondEmailtxtbox As TextBox
-    Friend WithEvents Label26 As Label
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents lblBirthdayFormat As Label
     Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents Label32 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label31 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents update As Button
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label30 As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents AdvisingDataGridView As DataGridView
     Friend WithEvents Label28 As Label
@@ -1789,33 +1791,4 @@ Partial Class StudentInfo
     Friend WithEvents Label29 As Label
     Friend WithEvents AdvisingCalendar As MonthCalendar
     Friend WithEvents advisingLabel As Label
-    Friend WithEvents BindingSource1 As BindingSource
-    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents Label30 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents BackgroundWorker2 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label31 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents update As Button
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Label32 As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Delete As Button
-    Friend WithEvents Label46 As Label
-    Friend WithEvents DegreeSeekingcombobox As ComboBox
-    Friend WithEvents Label33 As Label
-    Friend WithEvents UndergraduateDegreecombobox As ComboBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents ApplicationStatusComboBox As ComboBox
-    Friend WithEvents Label48 As Label
-    Friend WithEvents DateAcceptedMaskedTextBox As MaskedTextBox
-    Friend WithEvents Label47 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents DegreeTextBox As TextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents DateAcceptedComboBox2 As TextBox
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Logoutbutton1 As Button
 End Class

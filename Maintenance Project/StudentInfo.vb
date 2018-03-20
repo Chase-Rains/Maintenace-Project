@@ -30,21 +30,33 @@ Public Class StudentInfo
     End Sub
     '<---------------------------------------------------------------------------Create Student---------------------------------------------------------------------------------------------->
     Private Sub submit_Click_1(sender As Object, e As EventArgs) Handles submit.Click
-        If IsDate(txtBirthday1.Text) = False Then 'validates birthdate textbox
-            MsgBox("Please enter a valid birthdate", vbOK)
+        If txtFirstName.Text = "" Then
+            MsgBox("Please enter the student's First Name", vbOK)
             Exit Sub
         End If
-        If txtSSN.Text = "" Then 'validates SSN masked textbox
+        If txtLastName.Text = "" Then
+            MsgBox("Please enter the student's Last Name", vbOK)
+            Exit Sub
+        End If
+        If txtSSN.MaskCompleted = False Then 'validates SSN masked textbox
             MsgBox("Please enter the student's SSN", vbOK)
+            Exit Sub
+        End If
+        If IsDate(txtBirthday1.Text) = False Then 'validates birthdate textbox
+            MsgBox("Please enter a valid birthdate", vbOK)
             Exit Sub
         End If
         If GenderDropDown.Text = "" Then 'validates gender drop down
             MsgBox("Please enter the student's Gender", vbOK)
             Exit Sub
         End If
+        If txtEmail.Text = "" Then 'validates gender drop down
+            MsgBox("Please enter the student's Email", vbOK)
+            Exit Sub
+        End If
 
-        If Me.ValidateChildren() Then 'validates rquired textboxes using textbox validation else message
-            Dim Answer As MsgBoxResult = MsgBox("Are you sure you want to do this?", vbYesNo, "Create Student") 'ask if they want to proceed with the student addition
+
+        Dim Answer As MsgBoxResult = MsgBox("Are you sure you want to do this?", vbYesNo, "Create Student") 'ask if they want to proceed with the student addition
             Select Case Answer
                 Case MsgBoxResult.Yes
                     'inserts the textbox information into the database
@@ -79,22 +91,16 @@ Public Class StudentInfo
                     db.bind("@Sex", GenderDropDown.Text)
                     db.execute()
                     MsgBox("Action Completed", vbOK)
-                    db.sql = "Select studentID, firstname, middlename, lastname, ssn, localaddress, localcity, localstateorprovince, localzipcode, primaryemail, birthdate, sex From Students order by studentid"
-                    db.fill(SumReportDGV)
-                Case MsgBoxResult.No
+                db.sql = "Select studentID, firstname, middlename, lastname, ssn, localaddress, localcity, localstateorprovince, localzipcode, primaryemail, birthdate, sex From Students order by studentid"
+                db.fill(SumReportDGV)
+                Me.Dispose()
+                helper.Show()
+
+
+            Case MsgBoxResult.No
                     Exit Sub
             End Select
-        End If
-    End Sub
-    ' validates required textbox fields
-    Private Sub TextBoxes_Validating(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs) Handles txtFirstName.Validating, txtLastName.Validating
-        Dim field = DirectCast(sender, TextBox)
-        If String.IsNullOrWhiteSpace(field.Text) Then
-            field.HideSelection = False
-            field.SelectAll()
-            field.HideSelection = True
-            e.Cancel = True
-        End If
+
     End Sub
     '<---------------------------------------------------------------------------------Update Student----------------------------------------------------------------------------------------------->
 
@@ -264,6 +270,10 @@ Public Class StudentInfo
             db.execute()
             loadstudents()
         End If
+    End Sub
+    Private Sub Logoutbutton1_Click(sender As Object, e As EventArgs) Handles Logoutbutton1.Click
+        Form1.Show()
+        Me.Close()
     End Sub
 End Class
 

@@ -21,10 +21,7 @@ Public Class Form1
             Me.Close()
         End If
     End Sub
-
-    Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
-        'skip button for testing
-        StudentInfo.Show()
-        Me.Close()
+    Private Sub Closebutton_Click(sender As Object, e As EventArgs) Handles Closebutton.Click
+        Application.Exit()
     End Sub
 End Class
