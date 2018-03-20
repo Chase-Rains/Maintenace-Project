@@ -1,5 +1,6 @@
 ﻿Imports System.Data.SqlClient 'required to ensure unique advising date sub class
 Public Class StudentInfo
+    Dim SID As Integer 'stores student id
     Protected db As New db 'call db.vb to connect to database.
     Dim SelectedDate As Int32 'selected date on the advising calender
     Private Sub summary_report_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -7,13 +8,13 @@ Public Class StudentInfo
         SumReportDGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         AdvisingDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         ''Filling datagridview with students table when the page loads
-        db.sql = "Select studentID, firstname, middlename, lastname, ssn, localaddress, localcity, localstateorprovince, localzipcode, primaryemail, birthdate, sex From Students order by studentid"
+        db.sql = "Select studentID, firstname, middlename, lastname, ssn, localaddress, localcity, localstateorprovince, localzipcode, primaryemail, birthdate, sex, GMATVerbal, GMATQuant, GMATTotal, GMATPercent, UndergradInst, UndergradGPA, UndergradMajor, Degree, YearsWorkExp, Status, DateAccepted From Students order by studentid"
         db.fill(SumReportDGV)
         'students for advising
         db.sql = "Select studentID, firstname, middlename, lastname, ssn From Students order by studentid"
         db.fill(AdvisingDataGridView)
         'advising appointments
-        db.sql = "select scheduling.AppointmentID, CONCAT( advisors.firstname, ' ', advisors.lastname) as Advisor, [date], [time], CONCAT(students.firstname, ' ', students.lastname) as Student from scheduling right join advisors on scheduling.advisorid = [advisors].advisorid right join students on scheduling.studentid = students.studentid where  scheduling.AppointmentID is not null order by date"
+        db.sql = "declare @yesterday datetime declare @now datetime set @now = getdate() set @yesterday = dateadd(day,-1,@now) select CONCAT( advisors.firstname, ' ', advisors.lastname) as Advisor, [date], [time], CONCAT(students.firstname, ' ', students.lastname) as Student from scheduling right join advisors on scheduling.advisorid = [advisors].advisorid right join students on scheduling.studentid = students.studentid where  scheduling.AppointmentID is not null and [date] >=@yesterday order by date"
         db.fill(DataGridView1)
         'sets the maximum advising scheduling to 60 days in the future
         AdvisingCalendar.MinDate = New DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day)
@@ -21,6 +22,11 @@ Public Class StudentInfo
         ' Enable fullscreen
         Me.FormBorderStyle = Windows.Forms.FormBorderStyle.Sizable
         Me.WindowState = FormWindowState.Maximized
+    End Sub
+    Protected Sub loadstudents()
+        db.sql = "Select studentID, firstname, middlename, lastname, ssn, localaddress, localcity, localstateorprovince, localzipcode, primaryemail, birthdate, sex, GMATVerbal, GMATQuant, GMATTotal, GMATPercent, UndergradInst, UndergradGPA, UndergradMajor, Degree, YearsWorkExp, Status, DateAccepted From Students order by studentid"
+        ' db.bind("@StudentID", SID)
+        db.fill(SumReportDGV)
     End Sub
     '<---------------------------------------------------------------------------Create Student---------------------------------------------------------------------------------------------->
     Private Sub submit_Click_1(sender As Object, e As EventArgs) Handles submit.Click
@@ -38,42 +44,46 @@ Public Class StudentInfo
         End If
 
         If Me.ValidateChildren() Then 'validates rquired textboxes using textbox validation else message
-            MsgBox("Are you sure you want to do this?", vbOKCancel, "Create Student") 'ask if they want to proceed with the student addition
-            If MsgBoxResult.Ok Then
-                'inserts the textbox information into the database
-                db.sql = "Insert into Students (FirstName, MiddleName, Lastname, SSN, LocalAddress, LocalCity, LocalStateOrProvince, LocalZipcode, LocalHomePhone, PermAddress, PermCity, PermStateOrProvince, PermZipCode, PermHomePhone, MailingAddress, MailingCity, MailingStateOrProvince, MailingZip, email2, PrimaryEmail, Birthdate, CitizenshipStatus, OriginCountry, EthnicBackground, Sex) Values (@FirstName, @MiddleName, @Lastname, @SSN, @LocalAddress, @LocalCity, @LocalStateOrProvince, @LocalZipcode, @LocalHomePhone, @PermAddress, @PermCity, @PermStateOrProvince, @PermZipCode, @PermHomePhone, @MailingAddress, @MailingCity, @MailingStateOrProvince, @MailingZip,@email2, @PrimaryEmail, @Birthdate, @CitizenshipStatus, @OriginCountry, @EthnicBackground, @Sex)"
-                db.bind("@firstName", txtFirstName.Text)
-                db.bind("@MiddleName", txtMiddleName.Text)
-                db.bind("@LastName", txtLastName.Text)
-                db.bind("@SSN", txtSSN.Text)
-                db.bind("@LocalAddress", txtPAddress.Text)
-                db.bind("@LocalCity", txtPCity.Text)
-                db.bind("@localstateorprovince", cbxPState.Text)
-                db.bind("@LocalZipcode", txtPZipCode.Text)
-                db.bind("@LocalHomePhone", txtCurrentPhone.Text)
-                db.bind("@PermAddress", Paddress.Text)
-                db.bind("@PermCity", Pcity.Text)
-                db.bind("@PermStateOrProvince", PState.Text)
-                db.bind("@PermZipCode", PZip.Text)
-                db.bind("@PermHomePhone", txtPPhone.Text)
-                db.bind("@MailingAddress", Maddress.Text)
-                db.bind("@MailingCity", Mcity.Text)
-                db.bind("@MailingStateOrProvince", Mstate.Text)
-                db.bind("@MailingZip", MZip.Text)
-                db.bind("@PrimaryEmail", txtEmail.Text)
-                db.bind("@email2", SecondEmailtxtbox.Text)
-                db.bind("@Birthdate", txtBirthday1.Text)
-                db.bind("@CitizenshipStatus", CitizenshipDropDown.Text)
-                db.bind("@OriginCountry", OriginDropDown.Text)
-                db.bind("@EthnicBackground", EthnicDropDown.Text)
-                db.bind("@Sex", GenderDropDown.Text)
-                db.execute()
-                MsgBox("Action Completed", vbOK)
-                db.sql = "Select studentID, firstname, middlename, lastname, ssn, localaddress, localcity, localstateorprovince, localzipcode, primaryemail, birthdate, sex From Students order by studentid"
-                db.fill(SumReportDGV)
-            End If
-        Else
-            MsgBox("please enter all required fields", vbOK)
+            Dim Answer As MsgBoxResult = MsgBox("Are you sure you want to do this?", vbYesNo, "Create Student") 'ask if they want to proceed with the student addition
+            Select Case Answer
+                Case MsgBoxResult.Yes
+                    'inserts the textbox information into the database
+                    db.sql = "Insert into Students (DateAccepted, DegreeSeeking, Degree, FirstName, MiddleName, Lastname, SSN, LocalAddress, LocalCity, LocalStateOrProvince, LocalZipcode, LocalHomePhone, PermAddress, PermCity, PermStateOrProvince, PermZipCode, PermHomePhone, MailingAddress, MailingCity, MailingStateOrProvince, MailingZip, email2, PrimaryEmail, Birthdate, CitizenshipStatus, OriginCountry, EthnicBackground, Sex) Values (@DateAccepted, @DegreeSeeking, @Degree, @FirstName, @MiddleName, @Lastname, @SSN, @LocalAddress, @LocalCity, @LocalStateOrProvince, @LocalZipcode, @LocalHomePhone, @PermAddress, @PermCity, @PermStateOrProvince, @PermZipCode, @PermHomePhone, @MailingAddress, @MailingCity, @MailingStateOrProvince, @MailingZip,@email2, @PrimaryEmail, @Birthdate, @CitizenshipStatus, @OriginCountry, @EthnicBackground, @Sex)"
+                    db.bind("@DateAccepted", DateAcceptedMaskedTextBox.Text)
+                    db.bind("@DegreeSeeking", DegreeSeekingcombobox.Text)
+                    db.bind("@degree", UndergraduateDegreecombobox.Text)
+                    db.bind("@firstName", txtFirstName.Text)
+                    db.bind("@MiddleName", txtMiddleName.Text)
+                    db.bind("@LastName", txtLastName.Text)
+                    db.bind("@SSN", txtSSN.Text)
+                    db.bind("@LocalAddress", txtPAddress.Text)
+                    db.bind("@LocalCity", txtPCity.Text)
+                    db.bind("@localstateorprovince", cbxPState.Text)
+                    db.bind("@LocalZipcode", txtPZipCode.Text)
+                    db.bind("@LocalHomePhone", txtCurrentPhone.Text)
+                    db.bind("@PermAddress", Paddress.Text)
+                    db.bind("@PermCity", Pcity.Text)
+                    db.bind("@PermStateOrProvince", PState.Text)
+                    db.bind("@PermZipCode", PZip.Text)
+                    db.bind("@PermHomePhone", txtPPhone.Text)
+                    db.bind("@MailingAddress", Maddress.Text)
+                    db.bind("@MailingCity", Mcity.Text)
+                    db.bind("@MailingStateOrProvince", Mstate.Text)
+                    db.bind("@MailingZip", MZip.Text)
+                    db.bind("@PrimaryEmail", txtEmail.Text)
+                    db.bind("@email2", SecondEmailtxtbox.Text)
+                    db.bind("@Birthdate", txtBirthday1.Text)
+                    db.bind("@CitizenshipStatus", CitizenshipDropDown.Text)
+                    db.bind("@OriginCountry", OriginDropDown.Text)
+                    db.bind("@EthnicBackground", EthnicDropDown.Text)
+                    db.bind("@Sex", GenderDropDown.Text)
+                    db.execute()
+                    MsgBox("Action Completed", vbOK)
+                    db.sql = "Select studentID, firstname, middlename, lastname, ssn, localaddress, localcity, localstateorprovince, localzipcode, primaryemail, birthdate, sex From Students order by studentid"
+                    db.fill(SumReportDGV)
+                Case MsgBoxResult.No
+                    Exit Sub
+            End Select
         End If
     End Sub
     ' validates required textbox fields
@@ -91,12 +101,37 @@ Public Class StudentInfo
     ''When any text is changed in the search box we want to search the table for values like the text the user entered
     Private Sub SearchTextbox_TextChanged(sender As Object, e As EventArgs) Handles SearchTextbox.TextChanged
         ''We are using a like statement to search every column for a value like whatever is typed in the textbox. When the text box is blank it automatically selects all values so this works out good.
-        db.sql = "Select studentID, firstname, middlename, lastname, ssn, localaddress, localcity, localstateorprovince, localzipcode, primaryemail, birthdate, sex From Students Where StudentID like '%" & SearchTextbox.Text & "%' OR FirstName like '%" & SearchTextbox.Text & "%' OR LastName like '%" & SearchTextbox.Text & "%' "
+        db.sql = "Select studentID, firstname, middlename, lastname, ssn, localaddress, localcity, localstateorprovince, localzipcode, primaryemail, birthdate, sex, GMATVerbal, GMATQuant, GMATTotal, GMATPercent, UndergradInst, UndergradGPA, UndergradMajor, Degree, YearsWorkExp, Status, DateAccepted From Students Where StudentID like '%" & SearchTextbox.Text & "%' OR FirstName like '%" & SearchTextbox.Text & "%' OR LastName like '%" & SearchTextbox.Text & "%' "
         db.fill(SumReportDGV)
     End Sub
-    Private Sub AddStudentButton_Click(sender As Object, e As EventArgs) Handles AddStudentButton.Click
+    Private Sub UpdateStudentButton_Click(sender As Object, e As EventArgs) Handles UpdateStudentButton.Click
         'Update Record
         MessageBox.Show("Are you sure you want to update this student record?", "Add Student", MessageBoxButtons.YesNo)
+        db.sql = "UPDATE students SET firstname = @firstname, middlename = @middlename, lastname = @lastname, localaddress = @localaddress, localcity = @localcity, localstateorprovince = @localstateorprovince, localzipcode = @localzipcode, primaryemail = @primaryemail, GMATVerbal = @GMATVerbal, GMATQuant = @GMATQuant, GMATTotal = @GMATTotal, GMATPercent = @GMATPercent, UndergradInst = @UndergradInst, UndergradGPA = @UndergradGPA, UndergradMajor = @UndergradMajor, Degree = @Degree, YearsWorkExp = @YearsWorkExp, Status = @Status, DateAccepted = @DateAccepted WHERE studentid = @studentID"
+        db.bind("@StudentID", StudentIDTxtBox.Text)
+        db.bind("@firstname", FirstnameTExtBox.Text)
+        db.bind("@middlename", middlenameTextBox.Text)
+        db.bind("@lastname", LastnameTextBox.Text)
+        db.bind("@localaddress", AddressTextBox.Text)
+        db.bind("@localcity", CityTextBox.Text)
+        db.bind("@localstateorprovince", StateTextBox.Text)
+        db.bind("@localzipcode", ZipCodeTextBox.Text)
+        db.bind("@primaryemail", EmailTextBox.Text)
+        db.bind("@GMATVerbal", verbalTextBox.Text)
+        db.bind("@GMATQuant", QuantTextBox.Text)
+        db.bind("@GMATTotal", TotalTextBox.Text)
+        db.bind("@GMATPercent", AvgGMATTextBox1.Text)
+        db.bind("@UndergradInst", UndergradInstitutionTextBox.Text)
+        db.bind("@UndergradGPA", UGPATextBox.Text)
+        db.bind("@UndergradMajor", UndergradMajorTextBox.Text)
+        db.bind("@Degree", DegreeTextBox.Text)
+        db.bind("@Status", ApplicationStatusComboBox.Text)
+        db.bind("@DateAccepted", DateAcceptedComboBox2.Text)
+        db.bind("@YearsWorkExp", WorkExperienceTextBox.Text)
+        db.execute()
+        MessageBox.Show("Student Updated", "Updated!", MessageBoxButtons.OK)
+        loadstudents()
+
     End Sub
     Private Sub SumReportDGV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles SumReportDGV.CellClick
         ''If statement to test whether or not the cells are seleceted and if they are it fills them into the matching textbox
@@ -112,7 +147,19 @@ Public Class StudentInfo
             ZipCodeTextBox.Text = SumReportDGV.SelectedRows(0).Cells(8).Value.ToString()
             EmailTextBox.Text = SumReportDGV.SelectedRows(0).Cells(9).Value.ToString()
             BirthDateTextBox.Text = SumReportDGV.SelectedRows(0).Cells(10).Value.ToString()
-            SexComboBox.Text = SumReportDGV.SelectedRows(0).Cells(11).Value.ToString()
+            ApplicationStatusComboBox.Text = SumReportDGV.SelectedRows(0).Cells(11).Value.ToString()
+            verbalTextBox.Text = SumReportDGV.SelectedRows(0).Cells(12).Value.ToString()
+            QuantTextBox.Text = SumReportDGV.SelectedRows(0).Cells(13).Value.ToString()
+            TotalTextBox.Text = SumReportDGV.SelectedRows(0).Cells(14).Value.ToString()
+            AvgGMATTextBox1.Text = SumReportDGV.SelectedRows(0).Cells(15).Value.ToString()
+            UndergradInstitutionTextBox.Text = SumReportDGV.SelectedRows(0).Cells(16).Value.ToString()
+            UGPATextBox.Text = SumReportDGV.SelectedRows(0).Cells(17).Value.ToString()
+            UndergradMajorTextBox.Text = SumReportDGV.SelectedRows(0).Cells(18).Value.ToString()
+            DegreeTextBox.Text = SumReportDGV.SelectedRows(0).Cells(19).Value.ToString()
+            WorkExperienceTextBox.Text = SumReportDGV.SelectedRows(0).Cells(20).Value.ToString()
+            ApplicationStatusComboBox.Text = SumReportDGV.SelectedRows(0).Cells(21).Value.ToString()
+            DateAcceptedComboBox2.Text = SumReportDGV.SelectedRows(0).Cells(22).Value.ToString()
+
         End If
     End Sub
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
@@ -180,8 +227,8 @@ Public Class StudentInfo
         adapter.Fill(table)
         'if there isnt a match error schedules advising appointment
         If table.Rows.Count() <= 0 Then
-            MsgBox("Are you sure you want to do this?", vbOKCancel, "Create Student") 'ask if they want to proceed with the appointment creation
-            If MsgBoxResult.Ok Then
+            Dim confirmed As Integer = MsgBox("Are you sure you want to do this?", vbOKCancel, "Create Student") 'ask if they want to proceed with the appointment creation
+            If confirmed = DialogResult.OK Then
                 db.sql = "insert into scheduling (studentid, advisorid, date, time) values (@studentId, @AdvisorId, @date, @time)"
                 db.bind("@studentid", TextBox4.Text)
                 db.bind("@advisorID", TextBox5.Text)
@@ -189,11 +236,12 @@ Public Class StudentInfo
                 db.bind("@time", ComboBox1.Text)
                 db.execute()
                 MsgBox("Advising apointment created!", vbOK)
-                db.sql = "select scheduling.AppointmentID, CONCAT( advisors.firstname, ' ', advisors.lastname) as Advisor, [date], [time], CONCAT(students.firstname, ' ', students.lastname) as Student from scheduling right join advisors on scheduling.advisorid = [advisors].advisorid right join students on scheduling.studentid = students.studentid where  scheduling.AppointmentID is not null order by date"
+                db.sql = "declare @yesterday datetime declare @now datetime set @now = getdate() set @yesterday = dateadd(day,-1,@now)
+                            select CONCAT( advisors.firstname, ' ', advisors.lastname) as Advisor, [date], [time], CONCAT(students.firstname, ' ', students.lastname) as Student from scheduling right join advisors on scheduling.advisorid = [advisors].advisorid right join students on scheduling.studentid = students.studentid where  scheduling.AppointmentID is not null and [date] >=@yesterday order by date"
                 db.fill(DataGridView1)
             End If
         Else
-                MessageBox.Show("Advising apointment time slot is full", "Unable to Schedule", MessageBoxButtons.OK)
+            MessageBox.Show("Advising apointment time slot is full", "Unable to Schedule", MessageBoxButtons.OK)
         End If
     End Sub
 
@@ -205,6 +253,16 @@ Public Class StudentInfo
             TextBox5.Text = "3"
         Else
             TextBox5.Text = ""
+        End If
+    End Sub
+    Private Sub Delete_Click(sender As Object, e As EventArgs) Handles Delete.Click
+        ' allows deletion of student records
+        Dim confirmed As Integer = MessageBox.Show("Are you sure you want to completely delete this record?", "WARNING", MessageBoxButtons.YesNoCancel)
+        If confirmed = DialogResult.Yes Then
+            db.sql = "DELETE FROM students WHERE studentid = @studentid"
+            db.bind("@studentid", StudentIDTxtBox.Text)
+            db.execute()
+            loadstudents()
         End If
     End Sub
 End Class

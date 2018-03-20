@@ -7,9 +7,17 @@ CREATE TABLE Credentials (
 INSERT INTO credentials (username,password)
 VALUES ('Chase','1');
 
+----
+declare @yesterday datetime
+declare @now datetime
+set @now = getdate()
+set @yesterday = dateadd(day,-1,@now)
+
 select scheduling.AppointmentID, CONCAT( advisors.firstname, ' ', advisors.lastname) as Advisor, [date], [time], CONCAT(students.firstname, ' ', students.lastname) as Student
    from scheduling 
    right join advisors on scheduling.advisorid = [advisors].advisorid 
    right join students on scheduling.studentid = students.studentid
-   where  scheduling.AppointmentID is not null
-   order by appointmentid
+   where  scheduling.AppointmentID is not null and [date] >=@yesterday
+   order by date
+
+---
